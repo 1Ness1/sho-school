@@ -1,0 +1,33 @@
+.header__burger
+    background: none
+    border: none
+    width: 40px
+    height: 40px
+    position: relative
+    font-size: 0px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0
+    display: block
+
+    &-is-open
+        .line-1
+            transform: translate3d(0, 4px, 1px) rotate(45deg)
+
+        .line-2
+            transform: translate3d(0, -6px, 1px) rotate(135deg)
+
+.header__burger-line
+    display: block
+    background: $basic-black
+    height: 2px
+    width: 100%
+    transform-origin: 50% 50%
+    transition: transform .3s ease-in-out
+
+    &.line-2
+        margin-top: 8px
+
+.header__burger-is-open
+    border: 1px solid $black-op-15

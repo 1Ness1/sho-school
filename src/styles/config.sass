@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap')
+// Basic colors
+$basic-black: #3a3a3a
+$basic-grey: #f2f2f2
+$basic-yellow: #FFEB35
+$basic-white: #ffffff
+// Color by shade
+
+// Grey
+$grey-400: #929292
+
+// Black
+$black-op-30: rgba($basic-black, 0.3)
+$black-op-15: rgba($basic-black, 0.15)
+
+// Background-color
+$background-color: #D8D8D8
+
+$font: 'Montserrat', 'Arial', sans-serif
+$font-title: 'Benzin-example', 'Arial', sans-serif
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff')
+		// font-display: swap // Uncomment to initially display system fonts
+@include font('Benzin-example', normal, 400, '../fonts/benzin-regular.woff2')
+@include font('Benzin-example', normal, 500, '../fonts/benzin-medium.woff2')
+// @include font('Avanti-example', normal, 700, '../fonts/AvantiBold.woff')

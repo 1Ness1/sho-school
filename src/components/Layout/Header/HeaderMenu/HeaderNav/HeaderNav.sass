@@ -1,0 +1,48 @@
+.header-nav__list
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    margin-bottom: 60px
+    +media-breakpoint-up(lg)
+        flex-direction: row
+
+.header-nav__item--services
+    transition: max-height .3s
+
+.header-nav__link
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-grow: 1
+    width: 100%
+    padding: 20px
+    color: $basic-black
+    border-bottom: 1px solid $black-op-15
+    font-size: 20px
+    font-family: "Benzin-example"
+    line-height: 20px
+    text-align: left
+    text-transform: uppercase
+    transition: all 0.2s ease-out
+    overflow: hidden
+
+    &:hover
+        background: $basic-black
+        color: $basic-white
+        .header-nav__svg
+            stroke: $basic-grey
+
+.header-nav__svg
+    width: 10px
+    height: 10px
+    stroke: $basic-black
+
+.header-nav__counter
+    display: none
+    +media-breakpoint-up(md)
+        margin-right: 25%
+        display: block
+        width: 5%
+
+.header-nav__title
+    flex-grow: 1

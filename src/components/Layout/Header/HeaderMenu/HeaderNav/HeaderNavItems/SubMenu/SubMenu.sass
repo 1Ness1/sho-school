@@ -1,0 +1,41 @@
+.submenu
+  display: none
+  overflow: hidden
+  padding: 20px 0
+  max-height: 0
+  transition: max-height .2s ease-in-out
+
+.submenu--is-open
+  display: block
+  max-height: 100%
+
+.submenu__item
+  display: flex
+  align-items: center
+  position: relative
+  &::before
+    content: ""
+    width: 6px
+    height: 6px
+    background: #929292
+    border-radius: 50%
+    position: absolute
+    top: 50%
+    left: 0
+
+.submenu__link
+  font-size: 16px
+  line-height: 1
+  color: $basic-black
+  display: block
+  padding: 10px 0
+  margin-left: 31%
+
+.submenu__counter
+  display: none
+
+.submenu__icon
+  display: none
+
+.submenu__title
+  text-align: left
