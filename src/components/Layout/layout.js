@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "./Header/Header";
 import dataNav from "../../db/Header/dataNav";
-import dataHeader from "../../db/Header/dataHeader";
+import { dataNavigation } from "../../db/dataNavigation";
 
 const Layout = ({ children }) => {
+  const headerData = dataNavigation;
   const navDb = dataNav;
-  const headerDb = dataHeader;
   return (
     <>
-      <Header navDb={navDb} headerDb={headerDb} />
+      <Header navDb={navDb} headerData={headerData} />
       <div id="container" className="app">
         <main id="scroll-container">{children}</main>
       </div>
