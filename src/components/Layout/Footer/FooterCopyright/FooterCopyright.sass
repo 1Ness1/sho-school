@@ -1,0 +1,35 @@
+.footer__copyright
+  border-top: 1px solid $black-op-30
+  padding: 40px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.footer__copyright-content
+  font-size: 12px
+  color: $grey-400
+  text-transform: uppercase
+  display: flex
+  align-items: center
+  font-family: "Montserrat", "Arial", sans-serif
+
+.footer__copyright-link
+  position: relative
+  margin-left: 20px
+  &::before, &::after
+    content: ""
+    height: 12px
+    width: 1px
+    position: absolute
+    left: -10px
+    top: 50%
+    transform: translateY(-50%)
+    background: $grey-400
+    transition: all .3s ease-in-out
+  &::after
+    left: auto
+    right: -10px
+  &:last-child
+    &::before,
+    &::after
+      display: none

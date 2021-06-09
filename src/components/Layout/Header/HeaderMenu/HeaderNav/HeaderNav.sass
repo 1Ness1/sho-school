@@ -1,15 +1,16 @@
 .header-nav__list
   display: flex
   justify-content: space-between
-  flex-direction: column
   align-items: center
   // margin-right: 160px
     // margin-bottom: 60px
-  +media-breakpoint-up(lg)
-    flex-direction: row
+  +media-breakpoint-down(md)
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
 
 .header-nav__item--services
-  transition: max-height .3s
+  transition: all .3s ease-in-out
 
 .header-nav__svg
   display: none
@@ -21,40 +22,44 @@
 
 .header-nav__counter
   display: none
+  font-size: 14px
+  font-weight: 400
   +media-breakpoint-down(md)
-        // margin-right: 25%
-        // display: block
-        // width: 5%
+    display: block
+    margin-right: 25%
+    width: 5%
+    text-align: left
 
 .header-nav__title
-  flex-grow: 1
+  margin-right: auto
 
 .header-nav__item
   margin-right: 30px
+  overflow: hidden
   &:last-child
     margin-right: 0
+  +media-breakpoint-down(md)
+    margin-right: 0
+    width: 100%
 
 .header-nav__link
-  // display: flex
-  // justify-content: space-between
-  // align-items: center
-  // flex-grow: 1
-  // width: 100%
-    // padding: 20px
   color: $basic-black
-    // border-bottom: 1px solid $black-op-15
   font-size: 12px
   letter-spacing: 0.02em
   font-family: "Benzin-example"
   font-weight: 600
-  // line-height: 20px
-  // text-align: left
   text-transform: uppercase
-  // transition: all 0.2s ease-out
-  // overflow: hidden
-
-    // &:hover
-    //     background: $basic-black
-    //     color: $basic-white
-    //     .header-nav__svg
-    //         stroke: $basic-grey
+  transition: all 0.2s ease-out
+  +media-breakpoint-down(md)
+    display: flex
+    align-items: center
+    font-size: 20px
+    width: 100%
+    padding: 20px
+    font-weight: 400
+    border-bottom: 1px solid $black-op-15
+  &:hover
+    background: $basic-black
+    color: $basic-white
+    .header-nav__svg
+      stroke: $basic-grey

@@ -1,0 +1,20 @@
+.up__cyrcle-wrapper
+  position: relative
+
+.up__cyrcle-inner
+  @extend %absolute-center
+
+.up__cyrcle-arrow
+  transform: rotate(-90deg)
+  width: 10px
+  height: 10px
+  stroke: $basic-black
+
+.up__cyrcle-svg
+  animation: 8s ease-in-out infinite rotate-infinite
+
+@keyframes rotate-infinite
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)

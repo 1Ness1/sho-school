@@ -7,7 +7,7 @@ import "./HeaderLogo";
 const HeaderLogo = () => {
   return (
     <Link to="/" className="header__logo">
-      <ShoLogo />
+      <ShoLogo className="header__logo-svg" />
     </Link>
   );
 };

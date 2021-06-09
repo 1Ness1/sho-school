@@ -2,7 +2,7 @@ import React from "react";
 import useLanguages from "../../../../../../Hooks/useLanguages";
 
 // import YellowStar from "../../../../../svg/yellow_star.svg";
-import Arrow from "../../../../../../svg/arrow_1.svg";
+import Arrow from "../../../../../../svg/arrow.svg";
 
 const HeaderNavContacts = ({ item, closeMenuHandler, counter }) => {
   const langToggle = useLanguages;

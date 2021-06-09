@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import dataNav from "../../db/Header/dataNav";
 import { dataNavigation } from "../../db/dataNavigation";
 
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       <div id="container" className="app">
         <main id="scroll-container">{children}</main>
       </div>
+      <Footer />
     </>
   );
 };

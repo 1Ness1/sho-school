@@ -1,7 +1,7 @@
 import React from "react";
 import useLanguages from "../../../../../../Hooks/useLanguages";
 import SubMenu from "./SubMenu/SubMenu";
-import Arrow from "../../../../../../svg/arrow_1.svg";
+import Arrow from "../../../../../../svg/arrow.svg";
 
 const HeaderNavServices = ({ item, counter, openSubMenu, openSub }) => {
   const langToggle = useLanguages;

@@ -1,41 +1,72 @@
 .submenu
-  display: none
   overflow: hidden
-  padding: 20px 0
-  max-height: 0
-  transition: max-height .2s ease-in-out
+  position: absolute
+  max-width: 1920px
+  top: 150px
+  left: 0
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 20px
+  transition: all .2s ease-in-out
+  display: none
+  +media-breakpoint-down(md)
+    display: block
+    position: static
+    padding: 20px 0
+    margin-bottom: -240px
 
 .submenu--is-open
-  display: block
-  max-height: 100%
+  +media-breakpoint-down(md)
+    margin-bottom: 0
 
 .submenu__item
   display: flex
-  align-items: center
   position: relative
-  &::before
-    content: ""
-    width: 6px
-    height: 6px
-    background: #929292
-    border-radius: 50%
-    position: absolute
-    top: 50%
-    left: 0
+  +media-breakpoint-down(md)
+    &::before
+      content: ""
+      width: 6px
+      height: 6px
+      background: #929292
+      border-radius: 50%
+      position: absolute
+      top: 50%
+      left: 30px
 
 .submenu__link
+  flex-wrap: wrap
+  display: flex
+  align-items: flex-start
   font-size: 16px
   line-height: 1
   color: $basic-black
-  display: block
-  padding: 10px 0
-  margin-left: 31%
+  +media-breakpoint-down(md)
+    margin-left: 31%
+    color: $basic-black
+    padding: 10px 0
 
 .submenu__counter
-  display: none
+
+  +media-breakpoint-down(md)
+    display: none
 
 .submenu__icon
-  display: none
+  +media-breakpoint-down(md)
+    display: none
 
 .submenu__title
   text-align: left
+  text-transform: uppercase
+  font-size: 24px
+  line-height: 30px
+  white-space: pre-line
+  +media-breakpoint-down(md)
+    font-size: 16px
+    text-transform: none
+
+.submenu__inner
+  order: -1
+  width: 100%
+  align-items: center
+  display: flex
+  justify-content: space-between

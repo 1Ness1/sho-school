@@ -7,7 +7,7 @@ const HeaderNav = ({ navDb, closeMenuHandler, openSubMenu, openSub }) => {
   return (
     <ul className="header-nav__list">
       {navDb.map((item, index) => {
-        const counter = index + 1;
+        const counter = ++index;
         if (item.type === "services") {
           return (
             <HeaderNavServices
