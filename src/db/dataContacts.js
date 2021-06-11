@@ -4,25 +4,25 @@ export const dataContacts = {
       id: 1,
       link: "/",
       name: "telegram",
-      src: "/svg/telegram.svg",
+      src: "/telegram.svg",
     },
     {
       id: 2,
       link: "/",
       name: "whats-app",
-      src: "/svg/whats_app.svg",
+      src: "/whats_app.svg",
     },
     {
       id: 3,
       link: "/",
       name: "skype",
-      src: "/svg/skype.svg",
+      src: "/skype.svg",
     },
     {
       id: 4,
       link: "/",
       name: "viber",
-      src: "/svg/viber.svg",
+      src: "/viber.svg",
     },
   ],
 
@@ -30,17 +30,17 @@ export const dataContacts = {
     {
       id: 1,
       link: "/",
-      src: "/svg/tiktok.svg",
+      src: "/tiktok.svg",
     },
     {
       id: 2,
       link: "/",
-      src: "/svg/insta.svg",
+      src: "/insta.svg",
     },
     {
       id: 3,
       link: "/",
-      src: "/svg/facebook.svg",
+      src: "/facebook.svg",
     },
   ],
 };
