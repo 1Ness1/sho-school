@@ -8,6 +8,8 @@
 
 .networks
   display: flex
+  +media-breakpoint-down(xs)
+    display: none
 
 .networks__link
   margin-right: 15px
@@ -25,3 +27,5 @@
   font-size: 14px
   font-weight: 600
   color: $basic-black
+  +media-breakpoint-down(md)
+    display: none

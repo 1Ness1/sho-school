@@ -4,6 +4,7 @@ import useLanguages from "../../../../Hooks/useLanguages";
 import Networks from "../../../UI/Networks/Networks";
 import CyrcleArrow from "../../../UI/Circles/CyrcleArrow/CyrcleArrow";
 import CyrcleBg from "../../../../svg/circle/cyrcle_bg.svg";
+
 // import PropTypes from 'prop-types';
 
 const HomeTitle = () => {
@@ -23,11 +24,13 @@ const HomeTitle = () => {
         </h1>
         <div className="home__title-buttons">
           <div className="home__button-start">
-            <CyrcleArrow />
+            <CyrcleArrow
+              titleCyrcle={useLanguages("Почати навчання", "Начать обучение")}
+            />
           </div>
 
           <div className="home__button-networks">
-            <Networks />
+            <Networks title={"title"} />
           </div>
         </div>
       </div>

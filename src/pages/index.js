@@ -5,8 +5,10 @@ import SEO from "../components/seo";
 import "../styles/style.sass";
 
 import HomeTitle from "../components/Pages/Home/HomeTitle/HomeTitle";
+import Lessons from "../components/UI/Lessons/Lessons";
 // import Messanger from "../components/UI/Messanger/Messanger";
 
+import TapeLine from "../components/UI/TapeLine/TapeLine";
 // import CyrcleArrow from "../components/UI/Circles/CyrcleArrow/CyrcleArrow";
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -15,9 +17,9 @@ const IndexPage = () => {
     <>
       <Layout>
         <SEO title={t("Голована", "Главная")} />
-        <div className="home__wrapper">
-          <HomeTitle />
-        </div>
+        <HomeTitle />
+        <TapeLine />
+        <Lessons />
       </Layout>
     </>
   );

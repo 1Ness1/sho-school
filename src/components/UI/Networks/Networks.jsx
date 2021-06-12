@@ -15,7 +15,7 @@ const Networks = ({ title }) => {
                 <img src={item.src} alt="text" />
               </span>
             </span>
-            <p className="networks__title">{title}</p>
+            <p className="networks__title">{item.name}</p>
           </a>
         ))}
       </div>

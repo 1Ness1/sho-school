@@ -1,0 +1,43 @@
+.tape
+  padding: 180px 0
+  +media-breakpoint-down(lg)
+    padding: 135px 0
+  +media-breakpoint-down(md)
+    padding: 100px 0 140px 0
+  +media-breakpoint-down(md)
+    padding: 60px 0 100px 0
+
+.tape__line
+  font-size: 34px
+  letter-spacing: 0.04em
+  text-transform: uppercase
+  background: $basic-yellow
+  height: 85px
+  width: 150%
+  display: flex
+  place-items: center
+  transform-origin: 50% 0
+  +media-breakpoint-down(md)
+    font-size: 30px
+    height: 65px
+  +media-breakpoint-down(xs)
+    font-size: 20px
+    height: 60px
+    transform: rotate(0deg)
+
+.tape__line--stroke
+  transform: rotate(-6deg) translate(-10%, 20px)
+  +media-breakpoint-down(xs)
+    display: none
+
+.tape__line--fill
+  transform: rotate(6deg) translate(-10%, -20px)
+  +media-breakpoint-down(xs)
+    transform: rotate(0deg)
+
+.tape__text
+  white-space: pre
+
+.tape__text--stroke
+  color: transparent
+  -webkit-text-stroke: 1px $basic-black

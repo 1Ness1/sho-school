@@ -30,16 +30,19 @@ export const dataContacts = {
     {
       id: 1,
       link: "/",
+      name: "TikTok",
       src: "/tiktok.svg",
     },
     {
       id: 2,
       link: "/",
+      name: "Instagram",
       src: "/insta.svg",
     },
     {
       id: 3,
       link: "/",
+      name: "Facebook",
       src: "/facebook.svg",
     },
   ],

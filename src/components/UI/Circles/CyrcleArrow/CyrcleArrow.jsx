@@ -4,23 +4,28 @@ import PropTypes from "prop-types";
 import Arrow from "../../../../svg/arrow.svg";
 import YellowStar from "../../../../svg/yellow_star.svg";
 
-const CyrcleArrow = ({ title }) => {
-  if (title) {
+const CyrcleArrow = ({ titleCyrcle }) => {
+  if (titleCyrcle) {
     return (
       <div className="cyrcle__arrow-star">
         <button className="cyrcle__arrow-link">
-          <YellowStar />
-          <Arrow className="cyrcle__arrow" />
+          <span className="cyrcle__yellow-bg">
+            <YellowStar className="cyrcle__yellow-star" />
+            <Arrow className="cyrcle__arrow" />
+          </span>
+
+          <p className="cyrcle__arrow-title">{titleCyrcle}</p>
         </button>
-        <p className="cyrcle__arrow-title">{title}</p>
       </div>
     );
   } else {
     return (
       <div className="cyrcle__arrow-star">
         <button className="cyrcle__arrow-link">
-          <YellowStar />
-          <Arrow className="cyrcle__arrow" />
+          <span className="cyrcle__yellow-bg">
+            <YellowStar className="cyrcle__yellow-star" />
+            <Arrow className="cyrcle__arrow" />
+          </span>
         </button>
       </div>
     );
@@ -28,7 +33,7 @@ const CyrcleArrow = ({ title }) => {
 };
 
 CyrcleArrow.propTypes = {
-  title: PropTypes.string,
+  titleCyrcle: PropTypes.string,
 };
 
 export default CyrcleArrow;
