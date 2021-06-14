@@ -11,12 +11,12 @@
 .header
   padding: 0 20px
   position: sticky
-  +media-breakpoint-up(md)
+  @media (max-width: 992px)
     padding: 0 60px
-    +media-breakpoint-up(lg)
-      padding: 0 40px
-    +media-breakpoint-up(xl)
-      padding: 0 60px
+  @media (max-width: 1200px)
+    padding: 0 40px
+  @media (max-width: 576px)
+    padding: 0 60px
 
 .header__wrapper
   display: flex
@@ -30,7 +30,7 @@
   width: 100%
   margin: 0 auto
 
-  +media-breakpoint-up(lg)
+  @media (max-width: 1200px)
     min-height: 110px
-    +media-breakpoint-up(xl)
-      min-height: 115px
+  @media (max-width: 576px)
+    min-height: 115px

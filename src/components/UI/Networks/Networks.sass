@@ -8,11 +8,12 @@
 
 .networks
   display: flex
-  +media-breakpoint-down(xs)
+  @media (max-width: 576)
     display: none
 
 .networks__link
   margin-right: 15px
+  text-decoration: none
 
 .networks__icon-inner--telegram
   width: 24px
@@ -27,5 +28,5 @@
   font-size: 14px
   font-weight: 600
   color: $basic-black
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     display: none

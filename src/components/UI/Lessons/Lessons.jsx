@@ -11,7 +11,7 @@ const Lessons = () => {
   // const count = id++
   return (
     <section className="lessons">
-      <div className="lessons__wrapper">
+      <div className="wrapper">
         {dataLessons.lang.map((item, index) => {
           return (
             <a className="lessons__link" href="/" key={item.id}>

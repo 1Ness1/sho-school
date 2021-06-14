@@ -1,7 +1,7 @@
 .home__title-buttons
   display: flex
   justify-content: space-between
-  +media-breakpoint-down(xs)
+  @media (max-width: 576)
     justify-content: center
 
 .home__title
@@ -17,16 +17,16 @@
   line-height: 100px
   color: $basic-black
   font-weight: normal
-  +media-breakpoint-down(lg)
+  @media (max-width: 1200px) // ? lg
     font-size: 85px
     line-height: 80px
-  +media-breakpoint-down(md)
+  @media (max-width: 992px) // ? md
     font-size: 60px
     line-height: 65px
-  +media-breakpoint-down(sm)
+  @media (max-width: 768px)
     font-size: 45px
     line-height: 50px
-  +media-breakpoint-down(xs)
+  @media (max-width: 576) // ? xs
     font-size: 25px
     line-height: 30px
 
@@ -36,11 +36,11 @@
 
 .home__wrapper
   padding: 0 60px
-  +media-breakpoint-down(lg)
+  @media (max-width: 1200px)
     padding: 0 40px
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     padding: 0 60px
-  +media-breakpoint-down(xs)
+  @media (max-width: 576)
     padding: 0 50px
 
 .home__svg
@@ -53,13 +53,13 @@
     filter: blur(50px)
   .cyrcle__bg-2
     filter: blur(50px)
-  +media-breakpoint-down(lg)
+  @media (max-width: 1200px)
     width: 370px
     height: 370px
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     width: 313px
     height: 313px
-  +media-breakpoint-down(xs)
+  @media (max-width: 576)
     width: 220px
     height: 220px
     bottom: 0

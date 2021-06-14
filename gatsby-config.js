@@ -1,14 +1,16 @@
-const { languages, defaultLanguage } = require('./languages');
+const { languages, defaultLanguage } = require("./languages");
 
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    siteUrl: 'https://kind-lichterman-5edcb4.netlify.app',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,7 +18,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -31,18 +40,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-gatsby-cloud`,
     {
-      // including a plugin from outside the plugins folder needs the path to it
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        languages,
-        defaultLanguage,
-        path: `${__dirname}/locales`,
-        siteUrl: 'https://kind-lichterman-5edcb4.netlify.app',
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: [`ua`, `ru`, `en`],
+        defaultLanguage: `ua`,
+        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
+        siteUrl: `https://example.com/`,
+        // you can pass any i18next options
         i18nextOptions: {
-          debug: true,
-          lowerCaseLng: true,
-          saveMissing: false,
           interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
           },
@@ -51,16 +59,21 @@ module.exports = {
         },
         pages: [
           {
-            matchPath: '/ignored-page',
-            languages: ['en'],
+            matchPath: "/:lang?/blog/:uid",
+            getLanguageFromPath: true,
+            excludeLanguages: ["en"],
+          },
+          {
+            matchPath: "/preview",
+            languages: ["en"],
           },
         ],
       },
     },
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: ['/**/404', '/**/404.html'],
+        exclude: ["/**/404", "/**/404.html"],
         query: `
           {
             site {
@@ -95,7 +108,7 @@ module.exports = {
             const url = siteUrl + originalPath;
             const links = [
               { lang: defaultLanguage, url },
-              { lang: 'x-default', url },
+              { lang: "x-default", url },
             ];
             languages.forEach((lang) => {
               if (lang === defaultLanguage) return;
@@ -103,25 +116,26 @@ module.exports = {
             });
             return {
               url,
-              changefreq: 'daily',
-              priority: originalPath === '/' ? 1.0 : 0.7,
+              changefreq: "daily",
+              priority: originalPath === "/" ? 1.0 : 0.7,
               links,
             };
           });
         },
       },
     },
+    `gatsby-plugin-sass`,
     // {
     //   resolve: `gatsby-source-strapi`,
     //   options: {
-    //     apiURL: 'https://app-oxxclinic.herokuapp.com',
-    //     contentTypes: [`services-categories`],
-    //     singleTypes: [`home`],
-    //     queryLimit: 1000,
+    //     apiURL: "http://localhost:3000",
+    //     queryLimit: 1000, // Defaults to 100
+    //     collectionTypes: [`portfolio`, `services`],
+    //     // singleTypes: [`home-page`, `contact`],
     //   },
     // },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
           include: /svg/, // See below to configure properly

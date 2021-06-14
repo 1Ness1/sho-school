@@ -9,20 +9,20 @@
   grid-gap: 20px
   transition: all .2s ease-in-out
   display: none
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     display: block
     position: static
     padding: 20px 0
     margin-bottom: -240px
 
 .submenu--is-open
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     margin-bottom: 0
 
 .submenu__item
   display: flex
   position: relative
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     &::before
       content: ""
       width: 6px
@@ -40,18 +40,18 @@
   font-size: 16px
   line-height: 1
   color: $basic-black
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     margin-left: 31%
     color: $basic-black
     padding: 10px 0
 
 .submenu__counter
 
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     display: none
 
 .submenu__icon
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     display: none
 
 .submenu__title
@@ -60,7 +60,7 @@
   font-size: 24px
   line-height: 30px
   white-space: pre-line
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     font-size: 16px
     text-transform: none
 

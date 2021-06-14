@@ -1,10 +1,10 @@
 .tape
   padding: 180px 0
-  +media-breakpoint-down(lg)
+  @media (max-width: 1200px)
     padding: 135px 0
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     padding: 100px 0 140px 0
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     padding: 60px 0 100px 0
 
 .tape__line
@@ -17,22 +17,22 @@
   display: flex
   place-items: center
   transform-origin: 50% 0
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     font-size: 30px
     height: 65px
-  +media-breakpoint-down(xs)
+  @media (max-width: 576)
     font-size: 20px
     height: 60px
     transform: rotate(0deg)
 
 .tape__line--stroke
   transform: rotate(-6deg) translate(-10%, 20px)
-  +media-breakpoint-down(xs)
+  @media (max-width: 576)
     display: none
 
 .tape__line--fill
   transform: rotate(6deg) translate(-10%, -20px)
-  +media-breakpoint-down(xs)
+  @media (max-width: 576)
     transform: rotate(0deg)
 
 .tape__text

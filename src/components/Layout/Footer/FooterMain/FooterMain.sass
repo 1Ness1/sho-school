@@ -7,14 +7,14 @@
   grid-template-columns: 35% 1fr auto
   grid-column-gap: 10%
   margin-bottom: 80px
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     grid-template-columns: 1fr
     text-align: center
     grid-gap: 80px
-  +media-breakpoint-down(sm)
+  @media (max-width: 768px)
     text-align: left
   .up
-    +media-breakpoint-down(md)
+    @media (max-width: 992px)
       display: none
 
 .footer__socials
@@ -22,10 +22,10 @@
   grid-template-columns: 35% 1fr auto
   grid-column-gap: 10%
   align-items: flex-end
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     grid-template-columns: 1fr
     text-align: center
-  +media-breakpoint-down(sm)
+  @media (max-width: 768px)
     text-align: left
 
 .footer__title
@@ -34,7 +34,7 @@
   font-weight: 500
   color: $basic-black
   white-space: pre-line
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     font-size: 30px
     line-height: 35px
 
@@ -65,16 +65,16 @@
   letter-spacing: 0.04em
 
 .footer__cyrcle
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     display: none
 
 .footer__messenger,
 .footer__networks
-  +media-breakpoint-down(md)
+  @media (max-width: 992px)
     margin-bottom: 80px
   .messanger,
   .networks
-    +media-breakpoint-down(md)
+    @media (max-width: 992px)
       justify-content: center
-    +media-breakpoint-down(sm)
+    @media (max-width: 768px)
       justify-content: flex-start
