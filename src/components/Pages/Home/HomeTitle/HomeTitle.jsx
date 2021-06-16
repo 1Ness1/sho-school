@@ -2,8 +2,10 @@ import React from "react";
 import useLanguages from "../../../../Hooks/useLanguages";
 
 import Networks from "../../../UI/Networks/Networks";
+import CircleBackground from "../../../UI/Circles/СircleBackground/CircleBackground";
+
 import CyrcleArrow from "../../../UI/Circles/CyrcleArrow/CyrcleArrow";
-import CyrcleBg from "../../../../svg/circle/cyrcle_bg.svg";
+// import CyrcleBg from "../../../../svg/circle/cyrcle_bg.svg";
 
 // import PropTypes from 'prop-types';
 
@@ -33,8 +35,8 @@ const HomeTitle = () => {
             <Networks title={"title"} />
           </div>
         </div>
+        <CircleBackground className="home__svg" />
       </div>
-      <CyrcleBg className="home__svg" />
     </section>
   );
 };

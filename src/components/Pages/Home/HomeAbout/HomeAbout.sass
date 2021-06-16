@@ -1,10 +1,21 @@
 .home__about
   padding: 220px 0 130px 0
+  +media-breakpoint-down(lg)
+    padding: 200px 0 110px 0
+  +media-breakpoint-down(mg)
+    padding: 160px 0 90px 0
+  +media-breakpoint-down(xs)
+    padding: 100px 0
 
 .home__about-title
   display: flex
   justify-content: space-between
   margin-bottom: 100px
+  position: relative
+  .circle__svg
+    top: 0
+    right: 150px
+    transform: rotate(-90deg)
   .block__title-content
     display: block
     width: 40%

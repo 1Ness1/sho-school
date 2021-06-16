@@ -13,7 +13,6 @@ const CyrcleArrow = ({ titleCyrcle }) => {
             <YellowStar className="cyrcle__yellow-star" />
             <Arrow className="cyrcle__arrow" />
           </span>
-
           <p className="cyrcle__arrow-title">{titleCyrcle}</p>
         </button>
       </div>

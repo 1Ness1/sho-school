@@ -3,13 +3,17 @@ import BlockTitle from "../../../UI/BlockTitle/BlockTitle";
 // import PropTypes from 'prop-types';
 import CyrcleHeart from "../../../UI/Circles/CyrcleHeart/CyrcleHeart";
 import CyrcleArrow from "../../../UI/Circles/CyrcleArrow/CyrcleArrow";
+import CircleBackground from "../../../UI/Circles/СircleBackground/CircleBackground";
+
 const HomeAbout = () => {
+  console.log(CircleBackground);
   return (
     <section className="home__about">
       <div className="wrapper">
         <div className="home__about-title">
           <BlockTitle subTitle={"про нас"} title={"про школу та підхід"} />
           <CyrcleHeart />
+          <CircleBackground />
         </div>
         <div className="home__content markdown-components">
           <p>
