@@ -1,33 +1,37 @@
 import React from "react";
-// import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
+
+import CyrcleVideo from "../Circles/CyrcleVideo/CyrcleVideo";
 // import { graphql } from "gatsby";
 // import { GatsbyImage, getImage } from "gatsby-plugin-image";
 // import { dataImages } from "../../../db/dataImages";
 // import PropTypes from 'prop-types';
 
-const Video = ({}) => {
-  // const image = getImage(dataImages.static.videoCover);
+const Video = () => {
+  // const image = getImage(dataImages);
 
   // const pageQuery = graphql`
-  //   query hess {
-  //     static(id: { eq: $Id }) {
-  //       videoCover {
-  //         childImageSharp {
-  //           gatsbyImageData(width: 1920, placeholder: blurred, formats: [auto])
-  //         }
+  //   query {
+  //     id
+  //     videoCover {
+  //       childImageSharp {
+  //         gatsbyImageData(width: 1920, placeholder: blurred, formats: [auto])
   //       }
   //     }
   //   }
   // `;
   return (
     <section className="video">
-      {/* <StaticImage
-        src="../../../images/video_cover.jpg"
-        alt="video cover"
-        placeholder="blurred"
-        width={1920}
-      /> */}
-      {/* <GatsbyImage image={image} alt="alt" /> */}
+      <a className="video__link" href="/">
+        <StaticImage
+          src="../../../images/video_cover.jpg"
+          alt="video cover"
+          placeholder="blurred"
+          width={1920}
+        />
+        <CyrcleVideo />
+        {/* <GatsbyImage image={image} alt="alt" /> */}
+      </a>
     </section>
   );
 };

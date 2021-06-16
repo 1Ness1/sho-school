@@ -1,0 +1,31 @@
+@import "./InstagramContent/InstagramContent"
+@import "./InstagramTitle/InstagramTitle"
+
+.instagram
+  padding: 220px 0
+
+.instagram__wrapper
+  padding: 0 170px
+  .block__title-content
+    margin-bottom: 120px
+  .circle-text
+    @extend %absolute-center
+
+.instagram__content
+  max-width: 1920px
+  position: relative
+  margin: 0 auto
+  width: 100%
+  +media-breakpoint-down(xs)
+    grid-template-columns: 1fr 1fr
+    // &:nth-child(-n+4)
+    //   display: none
+
+.instagram__image:nth-last-of-type(-n+4)
+  +media-breakpoint-down(xs)
+    display: none
+
+.instagram__images
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  place-content: center

@@ -16,6 +16,8 @@
 .home__content
   columns: 2 auto
   margin-bottom: 80px
+  +media-breakpoint-down(md)
+    columns: 1 auto
 
 .markdown-components
   p
@@ -30,6 +32,8 @@
   justify-content: space-between
   .cyrcle__arrow-star
     width: 50%
+    +media-breakpoint-down(md)
+      width: auto
   .cyrcle__arrow-title
     border-bottom: 1px solid $basic-black
   .cyrcle__yellow-star

@@ -6,8 +6,10 @@ import useLanguage from "../Hooks/useLanguages";
 
 import Lessons from "../components/UI/Lessons/Lessons";
 import TapeLine from "../components/UI/TapeLine/TapeLine";
+import FreeLesson from "../components/UI/FreeLesson/FreeLesson";
 
 import { dataTapeLine } from "../db/dataTapeLine";
+// import { dataImages } from "../db/dataImages";
 
 import HomeTitle from "../components/Pages/Home/HomeTitle/HomeTitle";
 import HomeAbout from "../components/Pages/Home/HomeAbout/HomeAbout";
@@ -16,7 +18,7 @@ import HomeBenefits from "../components/Pages/Home/HomeBenefits/HomeBenefits";
 // import { useTranslation } from "gatsby-plugin-react-i18next";
 // import { graphql } from "gatsby";
 // import SEO from "../components/seo";
-
+import Video from "../components/UI/Video/Video";
 import "../styles/style.sass";
 
 const IndexPage = () => {
@@ -48,7 +50,7 @@ const IndexPage = () => {
           )}
         />
         <Lessons />
-        {/* <Video image={image} /> */}
+        <Video />
         <HomeAbout />
         <TapeLine
           text={useLanguage(
@@ -57,6 +59,12 @@ const IndexPage = () => {
           )}
         />
         <HomeBenefits />
+        <FreeLesson
+          title={useLanguage(
+            "Спробуй вивчати англійську - це просто \n та цікаво!",
+            "Спробуй вивчати англійську - це просто \n та цікаво!"
+          )}
+        />
       </Layout>
     </>
   );
