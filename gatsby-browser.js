@@ -5,9 +5,9 @@
  */
 
 // You can delete this file if you're not using it
-import "./node_modules/bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
 // impor/t 'bootstrap/scss/bootstrap-grid.scss';
-import "./node_modules/bootstrap/scss/bootstrap-reboot.scss";
-import "./node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+import "bootstrap/scss/bootstrap-reboot.scss";
+import "bootstrap/scss/mixins/_breakpoints.scss";
 
 // import './src/styles/style.sass';

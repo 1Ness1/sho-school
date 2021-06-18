@@ -1,16 +1,32 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 import useLanguage from "../../../Hooks/useLanguages";
-import { StaticImage } from "gatsby-plugin-image";
 import BlockTitle from "../../UI/BlockTitle/BlockTitle";
-import { dataImages } from "../../../db/dataImages";
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CircleText from "../../UI/Circles/CyrcleText/CyrcleText";
 const Instagram = () => {
-  console.log(dataImages.instagram);
-  // const images = dataImages.instagram;
+  const instagram = useStaticQuery(graphql`
+    query allInstaQuery {
+      source: allFile(filter: { absolutePath: { regex: "/instagram/" } }) {
+        nodes {
+          childImageSharp {
+            gatsbyImageData(
+              width: 274
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              layout: FULL_WIDTH
+            )
+          }
+        }
+      }
+    }
+  `);
+
+  const images = instagram.source.nodes;
   return (
     <section className="instagram">
-      <div className="instagram__wrapper">
+      <div className="wrapper">
         <BlockTitle
           subTitle={useLanguage("instagram", "instagram")}
           title={useLanguage(
@@ -20,74 +36,18 @@ const Instagram = () => {
         />
 
         <div className="instagram__content">
-          {/* {images.map((item) => {
-            return (
-              <StaticImage
-                key={item.id}
-                src={item.image}
-                alt="video cover"
-                placeholder="blurred"
-                width={1920}
-              />
-            );
-          })} */}
           <div className="instagram__images">
-            <StaticImage
-              className="instagram__image"
-              src="../../../images/instagram-1.jpg"
-              alt="image"
-              placeholder="blurred"
-              width={274}
-            />
-            <StaticImage
-              className="instagram__image"
-              src="../../../images/instagram-2.jpg"
-              alt="image"
-              placeholder="blurred"
-              width={274}
-            />
-            <StaticImage
-              className="instagram__image"
-              src="../../../images/instagram-3.jpg"
-              alt="image"
-              placeholder="blurred"
-              width={274}
-            />
-            <StaticImage
-              className="instagram__image"
-              src="../../../images/instagram-4.jpg"
-              alt="image"
-              placeholder="blurred"
-              width={274}
-            />
-            <StaticImage
-              className="instagram__image"
-              src="../../../images/instagram-5.jpg"
-              alt="image"
-              placeholder="blurred"
-              width={274}
-            />
-            <StaticImage
-              className="instagram__image"
-              src="../../../images/instagram-6.jpg"
-              alt="image"
-              placeholder="blurred"
-              width={274}
-            />
-            <StaticImage
-              className="instagram__image"
-              src="../../../images/instagram-7.jpg"
-              alt="image"
-              placeholder="blurred"
-              width={274}
-            />
-            <StaticImage
-              className="instagram__image"
-              src="../../../images/instagram-8.jpg"
-              alt="image"
-              placeholder="blurred"
-              width={274}
-            />
+            {images.map((item, index) => {
+              const image = getImage(item);
+              return (
+                <GatsbyImage
+                  className="instagram__image-item"
+                  image={image}
+                  key={index}
+                  alt="alt"
+                />
+              );
+            })}
           </div>
           <CircleText
             titleCircle={useLanguage(

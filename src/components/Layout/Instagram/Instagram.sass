@@ -1,12 +1,27 @@
 .instagram
   padding: 220px 0
+  +media-breakpoint-down(lg)
+    padding: 200px 0
+  +media-breakpoint-down(md)
+    padding: 160px 0
+  +media-breakpoint-down(xs)
+    padding: 100px 0
 
-.instagram__wrapper
-  padding: 0 170px
-  .block__title-content
-    margin-bottom: 120px
-  .circle-text
-    @extend %absolute-center
+  .wrapper
+    .block__title-content
+      margin-bottom: 120px
+      +media-breakpoint-down(md)
+        display: block
+        margin-bottom: 100px
+      +media-breakpoint-down(xs)
+        margin-bottom: 60px
+    .block__marker
+      +media-breakpoint-down(md)
+        margin-bottom: 55px
+      +media-breakpoint-down(xs)
+        margin-bottom: 40px
+    .circle-text
+      @extend %absolute-center
 
 .instagram__content
   max-width: 1920px
@@ -18,11 +33,18 @@
     // &:nth-child(-n+4)
     //   display: none
 
-.instagram__image:nth-last-of-type(-n+4)
-  +media-breakpoint-down(xs)
-    display: none
+.instagram__image-item
+  display: none
+  &:nth-of-type(-n+8)
+    display: inline-block
+    +media-breakpoint-down(md)
+      display: none
+      &:nth-of-type(-n+4)
+        display: inline-block
 
 .instagram__images
   display: grid
   grid-template-columns: repeat(4, 1fr)
   place-content: center
+  +media-breakpoint-down(md)
+    grid-template-columns: 1fr 1fr

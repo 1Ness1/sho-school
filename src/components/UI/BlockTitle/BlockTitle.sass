@@ -6,13 +6,27 @@
   font-size: 12px
   letter-spacing: 0.02em
   color: $grey-400
+  text-transform: uppercase
   font-weight: 600
   width: 25%
 
 .block__title
+  width: 75%
   font-size: 60px
   line-height: 65px
+  margin: 0
   color: $basic-black
   font-weight: normal
   text-transform: uppercase
   text-align: left
+  white-space: pre-line
+  +media-breakpoint-down(lg)
+    font-size: 50px
+    line-height: 55px
+  +media-breakpoint-down(md)
+    font-size: 40px
+    line-height: 45px
+  +media-breakpoint-down(xs)
+    white-space: normal
+    font-size: 20px
+    line-height: 25px

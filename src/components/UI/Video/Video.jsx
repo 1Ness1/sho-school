@@ -28,6 +28,7 @@ const Video = () => {
           alt="video cover"
           placeholder="blurred"
           width={1920}
+          layout="fullWidth"
         />
         <CyrcleVideo />
         {/* <GatsbyImage image={image} alt="alt" /> */}

@@ -11,7 +11,7 @@ const HomeAbout = () => {
     <section className="home__about">
       <div className="wrapper">
         <div className="home__about-title">
-          <BlockTitle subTitle={"про нас"} title={"про школу та підхід"} />
+          <BlockTitle subTitle={"про нас"} title={`про школу \n та підхід`} />
           <CyrcleHeart />
           <CircleBackground />
         </div>

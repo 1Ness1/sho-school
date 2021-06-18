@@ -1,16 +1,20 @@
+require("dotenv").config({
+  path: `.env.${process.env.ENABLE_GATSBY_REFRESH_ENDPOINT}`,
+});
+
 const { languages, defaultLanguage } = require("./languages");
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `AR-Design`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@erikdils`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,9 +29,36 @@ module.exports = {
         name: `locale`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images/instagram/`,
+        name: `allInstaQuery`,
+      },
+    },
 
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images/instagram/`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images/Carousel/`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images/gallery/`,
+    //   },
+    // },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -48,7 +79,7 @@ module.exports = {
         languages: [`ua`, `ru`, `en`],
         defaultLanguage: `ua`,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-        siteUrl: `https://example.com/`,
+        siteUrl: `https://ar-design.com.ua`,
         // you can pass any i18next options
         i18nextOptions: {
           interpolation: {
@@ -57,17 +88,17 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false,
         },
-        pages: [
-          {
-            matchPath: "/:lang?/blog/:uid",
-            getLanguageFromPath: true,
-            excludeLanguages: ["en"],
-          },
-          {
-            matchPath: "/preview",
-            languages: ["en"],
-          },
-        ],
+        // pages: [
+        //   {
+        //     matchPath: "/:lang?/blog/:uid",
+        //     getLanguageFromPath: false,
+        //     excludeLanguages: ["en"],
+        //   },
+        //   {
+        //     matchPath: "/preview",
+        //     languages: ["en"],
+        //   },
+        // ],
       },
     },
     {
@@ -128,10 +159,16 @@ module.exports = {
     // {
     //   resolve: `gatsby-source-strapi`,
     //   options: {
-    //     apiURL: "http://localhost:3000",
+    //     apiURL: "http://localhost:1337",
     //     queryLimit: 1000, // Defaults to 100
-    //     collectionTypes: [`portfolio`, `services`],
-    //     // singleTypes: [`home-page`, `contact`],
+    //     collectionTypes: [
+    //       `portfolio`,
+    //       `project-filter`,
+    //       `services`,
+    //       `services-categories`,
+    //       `blogs`,
+    //     ],
+    //     singleTypes: [`homes`, `abouts`, `contacts`, `services-pages`],
     //   },
     // },
     {
@@ -144,6 +181,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 };

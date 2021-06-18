@@ -1,8 +1,6 @@
 .cyrcle__video
   position: absolute
   @extend %absolute-center
-  width: 120px
-  height: 120px
 
 .cyrcle__triangle
   @extend %absolute-center
@@ -11,3 +9,14 @@
 .cyrcle__video-svg
   position: relative
   animation: 8s ease-in-out infinite rotate-infinite
+  width: 120px
+  height: 120px
+  +media-breakpoint-down(lg)
+    width: 100px
+    height: 100px
+  +media-breakpoint-down(md)
+    width: 120px
+    height: 120px
+  +media-breakpoint-down(xs)
+    width: 80px
+    height: 80px

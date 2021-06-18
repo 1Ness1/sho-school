@@ -5,30 +5,55 @@
   +media-breakpoint-down(mg)
     padding: 160px 0 90px 0
   +media-breakpoint-down(xs)
-    padding: 100px 0
+    padding: 100px 0 50px 0
 
 .home__about-title
   display: flex
   justify-content: space-between
   margin-bottom: 100px
   position: relative
+  +media-breakpoint-down(lg)
+    margin-bottom: 90px
+  +media-breakpoint-down(md)
+    margin-bottom: 70px
+  +media-breakpoint-down(xs)
+    margin-bottom: 55px
+
   .circle__svg
     top: 0
     right: 150px
     transform: rotate(-90deg)
   .block__title-content
     display: block
-    width: 40%
   .block__marker
     margin-bottom: 80px
+    width: auto
+    +media-breakpoint-down(md)
+      margin-bottom: 70px
+    +media-breakpoint-down(xs)
+      margin-bottom: 40px
   .cyrcle-heart
     align-self: flex-end
+    +media-breakpoint-down(xs)
+      display: none
+  .block__title
+    width: auto
 
 .home__content
-  columns: 2 auto
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 60px
   margin-bottom: 80px
+  // columns: 2
+  // column-gap: 60px
+  +media-breakpoint-down(lg)
+    // column-gap: 40px
+    grid-column-gap: 40px
   +media-breakpoint-down(md)
-    columns: 1 auto
+    columns: 1
+    grid-template-columns: 1fr
+  +media-breakpoint-down(md)
+    margin-bottom: 40px
 
 .markdown-components
   p
@@ -37,18 +62,34 @@
     line-height: 25px
     font-weight: normal
     font-family: "Montserrat", "Arial", sans-serif
+    &:last-child
+      margin-bottom: 0
+    +media-breakpoint-down(lg)
+      font-size: 14px
+      line-height: 20px
 
 .home__buttons
   display: flex
   justify-content: space-between
+  +media-breakpoint-down(sm)
+    justify-content: center
   .cyrcle__arrow-star
     width: 50%
     +media-breakpoint-down(md)
       width: auto
+    +media-breakpoint-down(sm)
+      &:last-of-type
+        display: none
   .cyrcle__arrow-title
     border-bottom: 1px solid $basic-black
   .cyrcle__yellow-star
     width: 80px
     height: 80px
+    +media-breakpoint-down(md)
+      width: 60px
+      height: 60px
+    +media-breakpoint-down(md)
+      width: 50px
+      height: 50px
   .cyrcle__arrow
-    transform: translate(-50%, -50%) rotate(-90deg)
+    transform: translate(-50%, -50%) rotate(0deg)
