@@ -4,7 +4,7 @@ import "./HeaderLanguage";
 
 function HeaderLanguage({ headerData }) {
   const language = headerData.lang;
-  console.log(headerData);
+  // console.log(headerData);
   return (
     <div className="header__lang">
       <button className="header__toggle">

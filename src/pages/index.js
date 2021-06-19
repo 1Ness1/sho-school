@@ -11,7 +11,7 @@ import FreeLesson from "../components/UI/FreeLesson/FreeLesson";
 import { dataTapeLine } from "../db/dataTapeLine";
 // import { dataImages } from "../db/dataImages";
 
-import HomeTitle from "../components/Pages/Home/HomeTitle/HomeTitle";
+import MainTitle from "../components/UI/MainTitle/MainTitle";
 import HomeAbout from "../components/Pages/Home/HomeAbout/HomeAbout";
 import HomeBenefits from "../components/Pages/Home/HomeBenefits/HomeBenefits";
 
@@ -42,7 +42,12 @@ const IndexPage = () => {
     <>
       <Layout>
         {/* <SEO title={t("Голована", "Главная")} /> */}
-        <HomeTitle />
+        <MainTitle
+          titleFirst={useLanguage("Онлайн школа", "Онлайн школа")}
+          titleSecond={useLanguage("Іноземних", "Иностранных")}
+          titleThird={useLanguage("Мов", "Языков")}
+          titleArrow={useLanguage("Почати навчання", "Начать обучение")}
+        />
         <TapeLine
           text={useLanguage(
             tapeLineData.homePage.title_ua,
@@ -60,6 +65,7 @@ const IndexPage = () => {
         />
         <HomeBenefits />
         <FreeLesson
+          container={"free-lesson__container"}
           title={useLanguage(
             "Спробуй вивчати англійську - це просто \n та цікаво!",
             "Спробуй вивчати англійську - це просто \n та цікаво!"

@@ -4,12 +4,12 @@ import useLanguages from "../../../Hooks/useLanguages";
 // import PropTypes from 'prop-types';
 import CircleText from "../Circles/CyrcleText/CyrcleText";
 
-const FreeLesson = ({ title }) => {
+const FreeLesson = ({ title, container }) => {
   console.log(title);
   return (
     <section className="free-lesson">
       <div className="wrapper">
-        <div className="free-lesson__container">
+        <div className={container}>
           <p className="free-lesson__title">{title}</p>
           <CircleText
             titleCircle={useLanguages(

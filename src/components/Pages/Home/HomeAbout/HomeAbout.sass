@@ -40,11 +40,16 @@
     width: auto
 
 .home__content
+  // columns: 2 auto 
   display: grid
+  // flex-flow: column wrap
+  // max-height: 20vw
+  place-items: center
   grid-template-columns: 1fr 1fr
-  grid-column-gap: 60px
   margin-bottom: 80px
+  // flex-basis: 0
   // columns: 2
+  grid-gap: 20px 60px
   // column-gap: 60px
   +media-breakpoint-down(lg)
     // column-gap: 40px
@@ -57,7 +62,8 @@
 
 .markdown-components
   p
-    margin-bottom: 20px
+    // margin-bottom: 20px
+    // width: 45%
     font-size: 15px
     line-height: 25px
     font-weight: normal
