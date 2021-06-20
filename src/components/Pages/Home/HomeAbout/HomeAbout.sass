@@ -41,38 +41,56 @@
 
 .home__content
   // columns: 2 auto 
-  display: grid
+  // display: grid
+  display: flex
+  justify-content: space-between
   // flex-flow: column wrap
   // max-height: 20vw
-  place-items: center
-  grid-template-columns: 1fr 1fr
+  // place-items: center
+  // grid-template-columns: 1fr 1fr
   margin-bottom: 80px
   // flex-basis: 0
   // columns: 2
-  grid-gap: 20px 60px
+  // grid-gap: 20px 60px
   // column-gap: 60px
   +media-breakpoint-down(lg)
     // column-gap: 40px
     grid-column-gap: 40px
   +media-breakpoint-down(md)
-    columns: 1
-    grid-template-columns: 1fr
+    // columns: 1
+    // grid-template-columns: 1fr
+    flex-direction: column
   +media-breakpoint-down(md)
     margin-bottom: 40px
 
 .markdown-components
+  display: flex
+  justify-content: space-between
+  span
+    display: block
+    margin-bottom: 40px
+    color: $grey-400
+    font-size: 12px
+    line-height: 1
+    font-weight: 500
+    letter-spacing: 0.02em
   p
-    // margin-bottom: 20px
-    // width: 45%
+    margin-bottom: 20px
     font-size: 15px
     line-height: 25px
     font-weight: normal
     font-family: "Montserrat", "Arial", sans-serif
-    &:last-child
+    color: $basic-black
+    &:last-of-type
       margin-bottom: 0
     +media-breakpoint-down(lg)
       font-size: 14px
       line-height: 20px
+  div
+    margin-bottom: 20px
+    width: 45%
+    &:last-of-type
+      margin-bottom: 0
 
 .home__buttons
   display: flex
@@ -86,8 +104,10 @@
     +media-breakpoint-down(sm)
       &:last-of-type
         display: none
+
   .cyrcle__arrow-title
     border-bottom: 1px solid $basic-black
+
   .cyrcle__yellow-star
     width: 80px
     height: 80px
@@ -97,5 +117,6 @@
     +media-breakpoint-down(md)
       width: 50px
       height: 50px
+
   .cyrcle__arrow
     transform: translate(-50%, -50%) rotate(0deg)

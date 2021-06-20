@@ -1,0 +1,41 @@
+import React from "react";
+// import PropTypes from 'prop-types';
+import BlockTitle from "../../../UI/BlockTitle/BlockTitle";
+import { StaticImage } from "gatsby-plugin-image";
+
+const AboutTeacher = ({ title, subTitle }) => {
+  return (
+    <section className="teacher">
+      <div className="wrapper">
+        <BlockTitle title={title} subTitle={subTitle} />
+        <div className="teacher__content">
+          <StaticImage
+            src="../../../../images/yana.jpg"
+            alt="Основатель"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
+          <div className="teacher__about">
+            <span className="teacher__marker">засновник</span>
+            <h3 className="teacher__title">
+              Я Яна, і це я проводжу пробні уроки
+            </h3>
+            <p className="teacher__description">
+              Я педагог філолог, і вже в студентства пробувала навчати
+              англійської по-своєму: придумала волонтерський проект HUMANities і
+              зарядила однокурсників навчати інгліш без книжок.
+            </p>
+            <p className="teacher__description">
+              Мені було цікаво, що з цього вийде, і тоді моєї величезної мрією
+              було зробити щось подібне вже для себе, як бізнесу.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// AboutTeacher.propTypes = {};
+
+export default AboutTeacher;

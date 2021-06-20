@@ -5,13 +5,14 @@ import CyrcleArrow from "../../UI/Circles/CyrcleArrow/CyrcleArrow";
 // import PropTypes from 'prop-types';
 import Arrow from "../../../svg/arrow.svg";
 
-const Lessons = () => {
+const Lessons = ({ children }) => {
   const langToggle = useLang;
   // const subTitle = dataLessons.lang
   // const count = id++
   return (
     <section className="lessons">
       <div className="wrapper">
+        {children}
         {dataLessons.lang.map((item, index) => {
           return (
             <a className="lessons__link" href="/" key={item.id}>

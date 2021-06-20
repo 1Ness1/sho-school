@@ -12,27 +12,25 @@ const ServicesCard = ({ title, subTitle, price, quantity, lesson, saving }) => {
       </div>
       <div className="card__content">
         <div className="card__price">
-          <p className="card__price-title">
+          <span className="card__price-title">
             {price}
             <span className="card__price-currency">грн</span>
-          </p>
+          </span>
         </div>
-        <div className="card__count">
-          <p className="card__count-container">
+        <div className="card__main">
+          <p className="card__count-container card__count-container--quantity">
             <span className="card__marker">
               {useLanguage("Кількість:", "Количество:")}
             </span>
             <span className="card__marker-code">{quantity}</span>
           </p>
-          <p className="card__count-container">
+          <p className="card__count-container card__count-container--lesson">
             <span className="card__marker">
               {useLanguage("Одне заняття:", "Одно занятие:")}
             </span>
             <span className="card__marker-code">{lesson}</span>
           </p>
-        </div>
-        <div className="card__count">
-          <p className="card__count-container">
+          <p className="card__count-container card__count-container--saving">
             <span className="card__marker">
               {useLanguage("Єкономія:", "Экономия")}
             </span>

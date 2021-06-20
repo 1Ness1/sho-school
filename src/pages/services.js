@@ -26,6 +26,7 @@ const ServicesPage = () => {
   return (
     <Layout>
       <MainTitle
+        sectionName={"home"}
         titleFirst={useLanguage("онлайн уроки", "онлайн уроки")}
         titleSecond={useLanguage("англійської", "английского")}
         titleThird={useLanguage("Мови", "Языка")}

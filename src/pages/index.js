@@ -43,6 +43,7 @@ const IndexPage = () => {
       <Layout>
         {/* <SEO title={t("Голована", "Главная")} /> */}
         <MainTitle
+          sectionName={"home"}
           titleFirst={useLanguage("Онлайн школа", "Онлайн школа")}
           titleSecond={useLanguage("Іноземних", "Иностранных")}
           titleThird={useLanguage("Мов", "Языков")}

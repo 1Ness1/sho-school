@@ -5,7 +5,6 @@ import useLanguages from "../../../Hooks/useLanguages";
 import CircleText from "../Circles/CyrcleText/CyrcleText";
 
 const FreeLesson = ({ title, container }) => {
-  console.log(title);
   return (
     <section className="free-lesson">
       <div className="wrapper">

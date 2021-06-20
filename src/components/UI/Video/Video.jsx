@@ -27,7 +27,6 @@ const Video = () => {
           src="../../../images/video_cover.jpg"
           alt="video cover"
           placeholder="blurred"
-          width={1920}
           layout="fullWidth"
         />
         <CyrcleVideo />

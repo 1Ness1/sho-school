@@ -9,10 +9,18 @@ import CyrcleArrow from "../Circles/CyrcleArrow/CyrcleArrow";
 
 // import PropTypes from 'prop-types';
 
-const MainTitle = ({ titleFirst, titleSecond, titleThird, titleArrow }) => {
+const MainTitle = ({
+  titleFirst,
+  titleSecond,
+  titleThird,
+  titleArrow,
+  children,
+  sectionName,
+}) => {
   return (
-    <section className="home">
+    <section className={sectionName}>
       <div className="home__wrapper">
+        {children}
         <h1 className="home__title">
           <span className="home__title-text">{titleFirst}</span>
           <span className="home__title-text">{titleSecond}</span>

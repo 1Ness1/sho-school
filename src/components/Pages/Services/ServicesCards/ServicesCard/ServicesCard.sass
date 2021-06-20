@@ -14,25 +14,67 @@
   text-align: center
   padding: 40px 0
   background: $basic-yellow
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  +media-breakpoint-down(xs)
+    justify-content: flex-start
+    align-items: flex-start
+    padding-left: 20px
 
 .card__price
   border-bottom: 1px solid $black-op-30
+  grid-area: price
+  padding: 30px 0
+  // justify-self: center
+  @media screen and ( max-width: 1420px  )
+    order: 1
+    border: none
 
 .card__price-title
   text-align: center
   text-transform: uppercase
-  padding: 40px 0
+  // padding: 40px 0
   font-size: 34px
   font-weight: 600
   line-height: 1
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  +media-breakpoint-down(xs)
+    justify-content: flex-start
+
+.card__main
+  grid-area: count
+  padding-top: 30px
+  @media screen and ( max-width: 1420px  )
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid $black-op-30
+    padding: 40px 0
+  +media-breakpoint-down(sm)
+    flex-direction: column
+    align-items: center
+    border-top: 1px solid $black-op-30
 
 .card__count
-  padding: 30px 0
+  padding-top: 30px
   border-bottom: 1px solid $black-op-30
 
 .card__content
   background: $basic-grey
   padding: 0 30px
+  display: grid
+  grid-template-areas: "price" "count" "button"
+  @media screen and ( max-width: 1420px  )
+    align-items: center
+    grid-template-areas: "count count" "price button"
+    justify-content: space-between
+  +media-breakpoint-down(sm)
+    grid-template-areas: "price price" "count count" "button button"
+  +media-breakpoint-down(xs)
+    padding: 0 20px
 
 .card__price-currency
   font-size: 14px
@@ -46,24 +88,89 @@
     height: 14px
     width: 1px
 
-.card__count-container
-  display: flex
-  justify-content: space-between
-
 .card__button
   padding: 40px 0
+  grid-area: button
   .cyrcle__yellow-star
     width: 80px
     height: 80px
+    +media-breakpoint-down(lg)
+      width: 60px
+      height: 60px
   .cyrcle__arrow
     transform: rotate(0deg) translate(-50%, -50%)
+  +media-breakpoint-down(sm)
+    .cyrcle__arrow-star
+      justify-content: center
+  +media-breakpoint-down(xs)
+    .cyrcle__arrow-link
+      flex-direction: row-reverse
+    .cyrcle__arrow-title
+      margin: 0
+      margin-right: 15px
+    .cyrcle__arrow-star
+      justify-content: flex-start
 
 .card__marker-code
   text-transform: uppercase
   color: $basic-black
+  font-weight: 600
+  line-height: 1
+  // @media screen and ( max-width: 1420px  )
 
 .card__marker
   font-size: 14px
-  line-height: 30px
+  line-height: 1
   letter-spacing: 0.04em
   color: $grey-400
+  @media screen and ( max-width: 1420px  )
+    margin-bottom: 16px
+
+.card__count-container--saving
+  padding: 30px 0
+  border-bottom: 1px solid $black-op-30
+  border-top: 1px solid $black-op-30
+  +media-breakpoint-down(sm)
+    padding-top: 30px
+
+.card__count-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  // margin-bottom: 15px
+  @media screen and ( max-width: 1420px  )
+    flex-direction: column
+    padding: 0 30px
+    border: none
+    border-left: 1px solid $black-op-30
+    align-items: flex-start
+    flex-grow: 1
+    &:first-of-type
+      border: 0
+      padding-left: 0
+    &:last-of-type
+      padding-right: 0
+  +media-breakpoint-down(sm)
+    padding: 0
+    border: none
+    align-items: center
+    width: 100%
+    &:last-of-type
+      padding-top: 30px
+  +media-breakpoint-down(xs)
+    align-items: flex-start
+
+.card__count-container--quantity
+  margin-bottom: 15px
+  @media screen and ( max-width: 1420px  )
+    margin: 0
+  +media-breakpoint-down(sm)
+    margin-bottom: 30px
+
+.card__count-container--lesson
+  padding-bottom: 30px
+  @media screen and ( max-width: 1420px  )
+    padding-bottom: 0
+  +media-breakpoint-down(sm)
+    padding-bottom: 30px
+    border-bottom: 1px solid $black-op-30
