@@ -12,7 +12,6 @@ const Instagram = () => {
         nodes {
           childImageSharp {
             gatsbyImageData(
-              width: 274
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
               layout: FULL_WIDTH

@@ -10,6 +10,7 @@ const AboutTeacher = ({ title, subTitle }) => {
         <BlockTitle title={title} subTitle={subTitle} />
         <div className="teacher__content">
           <StaticImage
+            className="teacher__photo"
             src="../../../../images/yana.jpg"
             alt="Основатель"
             placeholder="blurred"
@@ -20,12 +21,12 @@ const AboutTeacher = ({ title, subTitle }) => {
             <h3 className="teacher__title">
               Я Яна, і це я проводжу пробні уроки
             </h3>
-            <p className="teacher__description">
+            <p className="teacher__markdown">
               Я педагог філолог, і вже в студентства пробувала навчати
               англійської по-своєму: придумала волонтерський проект HUMANities і
               зарядила однокурсників навчати інгліш без книжок.
             </p>
-            <p className="teacher__description">
+            <p className="teacher__markdown">
               Мені було цікаво, що з цього вийде, і тоді моєї величезної мрією
               було зробити щось подібне вже для себе, як бізнесу.
             </p>

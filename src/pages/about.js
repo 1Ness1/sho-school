@@ -122,7 +122,6 @@ const About = () => {
         )}
       />
       <AboutStory />
-
       <FreeLesson
         container={"free-lesson__about"}
         title={useLanguage(

@@ -1,0 +1,43 @@
+.crumbs__container
+  padding: 40px 0
+  border-top: 1px solid $grey-400
+  border-bottom: 1px solid $grey-400
+
+.crumbs__list
+  display: flex
+  place-content: center
+  align-items: center
+
+.crumbs__list
+  display: flex
+
+.crumbs__item
+  margin-right: 20px
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    background: $grey-400
+    width: 5px
+    height: 5px
+    border-radius: 50%
+    top: 50%
+    left: -15px
+    transform: translateY(-50%)
+  &:first-of-type::before
+    display: none
+  &:last-of-type::before
+    background: $basic-black
+  &:last-child
+    margin-right: 0
+    .crumbs__link
+      color: $basic-black
+
+.crumbs__link
+  font-family: "Montserrat", "Arial", sans-serif
+  font-weight: 600
+  font-size: 12px
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  color: $grey-400
+  display: block
