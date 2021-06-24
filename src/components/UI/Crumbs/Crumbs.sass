@@ -1,3 +1,4 @@
+// ! на 700 все валится. Исправить!
 .crumbs__container
   padding: 40px 0
   border-top: 1px solid $grey-400
@@ -6,10 +7,8 @@
 .crumbs__list
   display: flex
   place-content: center
-  align-items: center
-
-.crumbs__list
-  display: flex
+  flex-wrap: wrap
+  text-align: center
 
 .crumbs__item
   margin-right: 20px
@@ -32,6 +31,17 @@
     margin-right: 0
     .crumbs__link
       color: $basic-black
+  // +media-breakpoint-down(xs)
+  //   &:last-of-type::after
+  //     content: ""
+  //     position: absolute
+  //     background: $basic-black
+  //     width: 5px
+  //     height: 5px
+  //     border-radius: 50%
+  //     top: 50%
+  //     right: -15px
+  //     transform: translateY(-50%)
 
 .crumbs__link
   font-family: "Montserrat", "Arial", sans-serif
@@ -41,3 +51,4 @@
   text-transform: uppercase
   color: $grey-400
   display: block
+  line-height: 15px

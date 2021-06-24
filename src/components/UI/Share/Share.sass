@@ -10,11 +10,17 @@
   align-items: center
   border-top: 1px solid $grey-400
   border-bottom: 1px solid $grey-400
+  +media-breakpoint-down(xs)
+    flex-direction: column
 
 .share__list
   display: flex
   align-items: center
   margin-left: 15px
+  +media-breakpoint-down(xs)
+    flex-direction: column
+    margin: 0
+    margin-top: 10px
 
 .share__link
   color: $basic-black
@@ -29,8 +35,9 @@
     color: $black
   &:active
     color: $gray-700
-  +media-breakpoint-down(md)
+  +media-breakpoint-down(lg)
     font-size: 12px
+
   &::before
     content: ''
     position: absolute
@@ -59,6 +66,11 @@
   // overflow: hidden
   &:last-child
     margin-right: 0
+  +media-breakpoint-down(xs)
+    margin: 0
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
 
 .share__title
   font-family: "Montserrat", "Arial", sans-serif

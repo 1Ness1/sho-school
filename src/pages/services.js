@@ -6,6 +6,7 @@ import useLanguage from "../Hooks/useLanguages";
 import { dataTapeLine } from "../db/dataTapeLine";
 import FreeLesson from "../components/UI/FreeLesson/FreeLesson";
 import ServicesCards from "../components/Pages/Services/ServicesCards/ServicesCards";
+import ServicesAccordion from "../components/Pages/Services/ServicesAccordion/ServicesAccordion";
 // import { useTranslation } from "gatsby-plugin-react-i18next";
 // import { graphql } from "gatsby";
 const ServicesPage = () => {
@@ -48,6 +49,7 @@ const ServicesPage = () => {
           "Сомневаешься? \n Попробуй пробный урок! Тебе понравится!"
         )}
       />
+      <ServicesAccordion />
       {/* pagination */}
     </Layout>
   );

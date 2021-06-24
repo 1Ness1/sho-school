@@ -5,7 +5,7 @@ import Instagram from "./Instagram/Instagram";
 import dataNav from "../../db/Header/dataNav";
 import { dataNavigation } from "../../db/dataNavigation";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, tapLink }) => {
   const headerData = dataNavigation;
   const navDb = dataNav;
   return (
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <div id="container" className="app">
         <main id="scroll-container">{children}</main>
       </div>
-      <Instagram />
+      <Instagram tapLink={tapLink} />
       <Footer />
     </>
   );

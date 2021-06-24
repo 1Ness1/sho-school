@@ -34,6 +34,16 @@ $font-title: 'Benzin-example', 'Arial', sans-serif
 	+media-breakpoint-down(xs)
 		padding: 0 20px
 
+.visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	padding: 0
+	overflow: hidden
+	border: 0
+	clip: rect(0 0 0 0)
+
 @mixin font($fname, $fstyle, $fweight, $furl)
 	@font-face
 		font-family: $fname

@@ -24,13 +24,11 @@
   .arrow__line
     display: none
 
-  .pagination__arrow--reverse
-    display: flex
-    flex-direction: row-reverse
-
   .pagination__arrow
     position: relative
     transition: all 400ms cubic-bezier(.73,.01,.5,.99)
+    +media-breakpoint-down(xs)
+      align-self: flex-start
     &::before
       content: ''
       position: absolute
@@ -45,6 +43,11 @@
       +media-breakpoint-down(xs)
         max-width: 120px
 
+  .pagination__arrow--reverse
+    display: flex
+    flex-direction: row-reverse
+    +media-breakpoint-down(xs)
+      align-self: flex-end
   .arrow-left, .arrow-right
     transition: all 400ms cubic-bezier(.73,.01,.5,.99) .05s
 
@@ -81,7 +84,7 @@
     margin-bottom: 35px
   +media-breakpoint-down(xs)
     margin-bottom: 20px
-    margin-left: 10px
+    margin-left: 0px
 
     // * Если отключить перенос текста margin-left: 0
 
