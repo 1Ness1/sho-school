@@ -4,15 +4,15 @@ import React from "react";
 import FooterMain from "./FooterMain/FooterMain";
 import FooterCopyright from "./FooterCopyright/FooterCopyright";
 
-import { dataFooter } from "../../../db/dataFooter";
+import { dataContacts } from "../../../db/dataContacts";
 
 const Footer = () => {
-  const footerData = dataFooter.main;
+  const contactsData = dataContacts.main;
   // const copyrightData = dataFooter.copyright;
   return (
     <footer className="footer">
       <div className="footer__wrapper">
-        <FooterMain footerData={footerData} />
+        <FooterMain footerData={contactsData} />
         <FooterCopyright />
       </div>
     </footer>
