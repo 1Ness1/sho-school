@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 import useLanguage from "../Hooks/useLanguages";
-
+import { dataCrumbs } from "../db/dataCrumbs";
 import Layout from "../components/Layout/layout";
 // ! UI
 import MainTitle from "../components/UI/MainTitle/MainTitle";
@@ -10,11 +10,13 @@ import Quote from "../components/UI/Quote/Quote";
 import BlockTitle from "../components/UI/BlockTitle/BlockTitle";
 import Lessons from "../components/UI/Lessons/Lessons";
 import FreeLesson from "../components/UI/FreeLesson/FreeLesson";
+import Crumbs from "../components/UI/Crumbs/Crumbs";
 // ! Pages component
 import AboutMarkdown from "../components/Pages/About/AboutMarkdown/AboutMarkdown";
 import AboutTeacher from "../components/Pages/About/AboutTeacher/AboutTeacher";
 import AboutStory from "../components/Pages/About/AboutStory/AboutStory";
 const About = () => {
+  const crumbs = dataCrumbs.about;
   return (
     <Layout>
       <MainTitle
@@ -129,6 +131,7 @@ const About = () => {
           "Кожен раз, коли ви \n відкладаєте пробний урок, ми сумуємо!"
         )}
       />
+      <Crumbs crumbs={crumbs} />
     </Layout>
   );
 };

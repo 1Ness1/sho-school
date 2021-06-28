@@ -1,0 +1,43 @@
+.filter__title
+  padding: 140px 0 60px 0
+  position: relative
+  .home__title-buttons
+    display: none
+  .circle__svg
+    bottom: 0
+    left: 45%
+
+.filter__list
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: -100%
+  opacity: 0
+  height: 0px
+  transition: all 0.25s ease-in-out
+
+.filter__list--active
+  visibility: visible
+  opacity: 1
+  margin-top: 0
+  height: 100%
+
+.filter__btn
+  background: transparent
+  border: 1px solid $grey-400
+  font-size: 14px
+  text-transform: uppercase
+  padding: 15px 30px
+
+.filter__btn--active
+  background: $basic-black
+  color: $basic-grey
+  border: 1px solid transparent
+
+.filter__wrapper
+  overflow: hidden
+
+// .filter__acordion
+//   display: none
+//   +media-breakpoint-down(lg)
+//     display: block

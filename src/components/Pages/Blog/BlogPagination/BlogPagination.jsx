@@ -23,22 +23,30 @@ const BlogPagination = () => {
     .map((item) => {
       return (
         <li className="blog__item" key={item.id}>
-          <Link className="blog__link" to={"/blog/"}>
+          <div className="blog__item-container">
             <div className="blog__number">
               <span>{item.id <= 9 ? "0" + item.id + "." : item.id + "."}</span>
             </div>
             <div className="blog__container">
               <div className="blog__filter-list">
-                <span className="blog__filter-item blog__filter--title">
+                <Link
+                  className="blog__filter-item blog__filter--title"
+                  to={"/blog/"}
+                >
                   {langToggle(item.filter_all_ua, item.filter_all_ru)}
-                </span>
-                <span className="blog__filter-item blog__filter--subtitle">
+                </Link>
+                <Link
+                  className="blog__filter-item blog__filter--subtitle"
+                  to={"/blog/"}
+                >
                   {langToggle(item.type_ua, item.type_ru)}
-                </span>
+                </Link>
               </div>
-              <span className="blog__title">
-                {langToggle(item.title_ua, item.title_ru)}
-              </span>
+              <Link className="blog__link" to={"/blog/"}>
+                <span className="blog__title">
+                  {langToggle(item.title_ua, item.title_ru)}
+                </span>
+              </Link>
               <div className="blog__subtitle">
                 <span className="blog__time">
                   {langToggle(item.time_ua, item.time_ru)}
@@ -47,8 +55,10 @@ const BlogPagination = () => {
                 <span className="blog__date">{item.date}</span>
               </div>
             </div>
-            <CircleArrow />
-          </Link>
+            <Link className="blog__link" to={"/blog/"}>
+              <CircleArrow />
+            </Link>
+          </div>
         </li>
       );
     });
@@ -65,6 +75,9 @@ const BlogPagination = () => {
           previousLabel={<ArrowLeft />}
           nextLabel={<ArrowRight />}
           pageCount={pageCount}
+          breakLabel={"..."}
+          breakClassName={"pagination__break"}
+          breakLinkClassName={"pagination__break-link"}
           onPageChange={changePage}
           containerClassName={"pagination"}
           pageClassName={"pagination__item"}
@@ -73,6 +86,8 @@ const BlogPagination = () => {
           activeLinkClassName={"pagination__link--active"}
           previousClassName={"pagination__previous"}
           nextClassName={"pagination__next"}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={2}
         />
       </div>
     </section>

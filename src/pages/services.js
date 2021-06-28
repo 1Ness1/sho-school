@@ -7,8 +7,11 @@ import { dataTapeLine } from "../db/dataTapeLine";
 import FreeLesson from "../components/UI/FreeLesson/FreeLesson";
 import ServicesCards from "../components/Pages/Services/ServicesCards/ServicesCards";
 import ServicesAccordion from "../components/Pages/Services/ServicesAccordion/ServicesAccordion";
+import Crumbs from "../components/UI/Crumbs/Crumbs";
+import { dataCrumbs } from "../db/dataCrumbs";
 // import { useTranslation } from "gatsby-plugin-react-i18next";
 // import { graphql } from "gatsby";
+
 const ServicesPage = () => {
   // const { t } = useTranslation();
   // const query = graphql`
@@ -24,6 +27,7 @@ const ServicesPage = () => {
   //     }
   //   }
   // `;
+  const crumbs = dataCrumbs.services;
   return (
     <Layout>
       <MainTitle
@@ -42,6 +46,8 @@ const ServicesPage = () => {
       <ServicesCards />
       {/* slider */}
       {/* гармошка */}
+      <ServicesAccordion />
+
       <FreeLesson
         container={"free-lesson__services-container"}
         title={useLanguage(
@@ -49,7 +55,7 @@ const ServicesPage = () => {
           "Сомневаешься? \n Попробуй пробный урок! Тебе понравится!"
         )}
       />
-      <ServicesAccordion />
+      <Crumbs crumbs={crumbs} />
       {/* pagination */}
     </Layout>
   );

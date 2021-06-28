@@ -47,4 +47,24 @@ export const dataCrumbs = {
       title_ru: "7 ідей ЯК ВЧИТИ АНГЛІЙСЬКу в НОВОРІЧНІ СВЯТА",
     },
   ],
+  services: [
+    {
+      id: 1,
+      link: "/",
+      title_ua: "Головна",
+      title_ru: "Главная",
+    },
+    {
+      id: 2,
+      link: "/services/",
+      title_ua: "Послуги",
+      title_ru: "Услуги",
+    },
+    {
+      id: 3,
+      link: "/services/",
+      title_ua: "Онлайн уроки англійської мови",
+      title_ru: "Онлайн уроки английского языка",
+    },
+  ],
 };
