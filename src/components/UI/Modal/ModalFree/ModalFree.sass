@@ -1,0 +1,124 @@
+.modal__form
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  height: auto
+
+.modal__block-input
+  width: 45%
+  margin-bottom: 40px
+
+.modal__label
+  width: 100%
+
+.modal__label-marker
+  display: block
+  font-size: 10px
+  color: $grey-400
+  text-transform: uppercase
+  letter-spacing: 0.02em
+  font-family: "Montserrat", "Arial", sans-serif
+  font-weight: 600
+  line-height: 1
+  margin-bottom: 10px
+
+.modal__block
+  background: $grey-500
+  max-width: 800px
+  width: 100%
+  height: auto
+  padding: 100px 40px
+  position: relative
+
+.modal__input
+  padding: 0
+  padding-bottom: 10px
+
+  border: 0
+  border-bottom: 1px solid $basic-black
+
+  background: transparent
+  width: 100%
+
+  font-size: 14px
+  font-family: "Montserrat", "Arial", sans-serif
+  font-weight: 500
+  color: $basic-black
+
+  &::placeholder
+    color: $black
+    opacity: 1
+    font: inherit
+  &:focus
+    outline: none
+    border: none
+    border-bottom: 1px solid $basic-black
+
+.modal__block-input--textarea
+  width: 100%
+  margin-bottom: 50px
+  resize: vertical
+
+.modal__block-input--email
+  width: 100%
+
+.modal__title
+  margin-bottom: 60px
+  font-weight: 500
+  font-weight: 30px
+  text-align: left
+  max-width: 450px
+  width: 100%
+
+.modal__footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+
+.modal__footer-title
+  font-size: 12px
+  font-family: "Montserrat", "Arial", sans-serif
+  font-weight: 500
+  color: $grey-600
+  width: 50%
+
+.modal__footer-link
+  display: block
+
+.modal__button
+  width: 45%
+  .cyrcle__arrow-title
+    padding-bottom: 5px
+    border-bottom: 1px solid $black
+  .cyrcle__yellow-bg
+    transform: rotate(-90deg)
+  .cyrcle__yellow-star
+    width: 80px
+    height: 80px
+
+.modal__line
+  width: 12px
+  height: 2px
+  background: $basic-black
+  display: block
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(0)
+
+.modal__line--1
+  transform: translate(-50%, -50%) rotate(-45deg)
+
+.modal__line--2
+  transform: translate(-50%, -50%) rotate(45deg)
+
+.modal__leave-button
+  width: 40px
+  height: 40px
+  // outline: 1px solid $black-op-30
+  // outline-offset: -1px
+  position: absolute
+  top: 60px
+  right: 60px
