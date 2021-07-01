@@ -4,7 +4,7 @@ import Footer from "./Footer/Footer";
 import Instagram from "./Instagram/Instagram";
 import dataNav from "../../db/Header/dataNav";
 import { dataNavigation } from "../../db/dataNavigation";
-
+// import Modal from "./Modal/Modal";
 const Layout = ({ children, tapLink }) => {
   const headerData = dataNavigation;
   const navDb = dataNav;
@@ -16,6 +16,7 @@ const Layout = ({ children, tapLink }) => {
       </div>
       <Instagram tapLink={tapLink} />
       <Footer />
+      {/* <Modal /> */}
     </>
   );
 };

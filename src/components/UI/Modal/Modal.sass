@@ -1,0 +1,32 @@
+@import "./ModalFree/ModalFree"
+@import "./ModalOrder/ModalOrder"
+
+.modal
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 1
+  overflow-y: auto
+  opacity: 0
+  transition: all 0.5s ease-out
+  background: rgba($basic-black, 0.5)
+  pointer-events: none
+  display: block
+
+.modal--show
+  opacity: 1
+  pointer-events: all
+
+.modal__wrapper
+  position: fixed
+  top: 50%
+  left: 50%
+
+  max-height: 800px
+  height: 100%
+  transform: translate(100%, -50%)
+  transition: all .3s ease-out
+
+.modal__wrapper--show
+  transform: translate(0, -50%)

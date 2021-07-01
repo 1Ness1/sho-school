@@ -2,7 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import useLanguage from "../../../../Hooks/useLanguages";
 import ServicesCard from "./ServicesCard/ServicesCard";
-const ServicesCards = () => {
+const ServicesCards = ({ showModalOrder }) => {
   return (
     <section className="cards">
       <div className="wrapper">
@@ -14,6 +14,7 @@ const ServicesCards = () => {
             quantity={useLanguage("8 занять", "8 занятий")}
             lesson={useLanguage("250 грн", "250 грн")}
             saving={useLanguage("0 грн", "0 грн")}
+            showModalOrder={showModalOrder}
           />
           <ServicesCard
             title={useLanguage("1 Місяць", "1 Месяц")}
@@ -22,6 +23,7 @@ const ServicesCards = () => {
             quantity={useLanguage("8 занять", "8 занятий")}
             lesson={useLanguage("250 грн", "250 грн")}
             saving={useLanguage("0 грн", "0 грн")}
+            showModalOrder={showModalOrder}
           />
           <ServicesCard
             title={useLanguage("1 Місяць", "1 Месяц")}
@@ -30,6 +32,7 @@ const ServicesCards = () => {
             quantity={useLanguage("8 занять", "8 занятий")}
             lesson={useLanguage("250 грн", "250 грн")}
             saving={useLanguage("0 грн", "0 грн")}
+            showModalOrder={showModalOrder}
           />
         </div>
         {/* <div className="cards__container">

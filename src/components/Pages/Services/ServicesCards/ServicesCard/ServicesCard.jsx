@@ -3,7 +3,15 @@ import CyrcleArrow from "../../../../UI/Circles/CyrcleArrow/CyrcleArrow";
 import useLanguage from "../../../../../Hooks/useLanguages";
 // import PropTypes from 'prop-types';
 
-const ServicesCard = ({ title, subTitle, price, quantity, lesson, saving }) => {
+const ServicesCard = ({
+  title,
+  subTitle,
+  price,
+  quantity,
+  lesson,
+  saving,
+  showModalOrder,
+}) => {
   return (
     <div className="cards__item">
       <div className="card__header">
@@ -38,9 +46,11 @@ const ServicesCard = ({ title, subTitle, price, quantity, lesson, saving }) => {
           </p>
         </div>
         <div className="card__button">
-          <CyrcleArrow
-            titleCyrcle={useLanguage("замовити пакет", "заказать пакет")}
-          />
+          <button onClick={showModalOrder}>
+            <CyrcleArrow
+              titleCyrcle={useLanguage("замовити пакет", "заказать пакет")}
+            />
+          </button>
         </div>
       </div>
     </div>

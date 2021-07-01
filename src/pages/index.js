@@ -10,7 +10,7 @@ import FreeLesson from "../components/UI/FreeLesson/FreeLesson";
 
 import { dataTapeLine } from "../db/dataTapeLine";
 // import { dataImages } from "../db/dataImages";
-
+import Modal from "../components/UI/Modal/Modal";
 import MainTitle from "../components/UI/MainTitle/MainTitle";
 import HomeAbout from "../components/Pages/Home/HomeAbout/HomeAbout";
 import HomeBenefits from "../components/Pages/Home/HomeBenefits/HomeBenefits";
@@ -37,7 +37,16 @@ const IndexPage = () => {
   //     }
   //   }
   // `;
+  const [modalFree, setModalFree] = React.useState(false);
+  const [modalOrder, setModalOrder] = React.useState(false);
 
+  const showFreeModal = () => {
+    setModalFree(!modalFree);
+  };
+
+  const showModalOrder = () => {
+    setModalOrder(!modalOrder);
+  };
   return (
     <>
       <Layout>
@@ -48,6 +57,7 @@ const IndexPage = () => {
           titleSecond={useLanguage("Іноземних", "Иностранных")}
           titleThird={useLanguage("Мов", "Языков")}
           titleArrow={useLanguage("Почати навчання", "Начать обучение")}
+          showFreeModal={showFreeModal}
         />
         <TapeLine
           text={useLanguage(
@@ -57,7 +67,7 @@ const IndexPage = () => {
         />
         <Lessons />
         <Video />
-        <HomeAbout />
+        <HomeAbout showFreeModal={showFreeModal} />
         <TapeLine
           text={useLanguage(
             tapeLineData.result.title_ua,
@@ -71,6 +81,13 @@ const IndexPage = () => {
             "Спробуй вивчати англійську - це просто \n та цікаво!",
             "Спробуй вивчати англійську - це просто \n та цікаво!"
           )}
+          showFreeModal={showFreeModal}
+        />
+        <Modal
+          modalFree={modalFree}
+          modalOrder={modalOrder}
+          showFreeModal={showFreeModal}
+          showModalOrder={showModalOrder}
         />
       </Layout>
     </>

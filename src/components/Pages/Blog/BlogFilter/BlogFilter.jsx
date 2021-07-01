@@ -5,10 +5,10 @@ import { dataBlog } from "../../../../db/dataBlog";
 // import PropTypes from '??prop-types';
 
 const BlogFilter = () => {
-  const langToggle = useLanguage;
+  // const langToggle = useLanguage;
   const [activeType, setActiveType] = useState(1);
   const [types, setTypes] = useState(false);
-  const [articles, setArticles] = useState(blogType);
+  // const [articles, setArticles] = useState(blogType);
   const blogType = dataBlog.type;
   console.log(activeType);
   return (

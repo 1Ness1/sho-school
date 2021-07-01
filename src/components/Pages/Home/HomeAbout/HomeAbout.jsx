@@ -5,8 +5,7 @@ import CyrcleHeart from "../../../UI/Circles/CyrcleHeart/CyrcleHeart";
 import CyrcleArrow from "../../../UI/Circles/CyrcleArrow/CyrcleArrow";
 import CircleBackground from "../../../UI/Circles/СircleBackground/CircleBackground";
 
-const HomeAbout = () => {
-  console.log(CircleBackground);
+const HomeAbout = ({ showFreeModal }) => {
   return (
     <section className="home__about">
       <div className="wrapper">
@@ -43,8 +42,12 @@ const HomeAbout = () => {
           </div>
         </div>
         <div className="home__buttons">
-          <CyrcleArrow titleCyrcle={"Більше про школу"} />
-          <CyrcleArrow titleCyrcle={"Безкоштовне заняття"} />
+          <button className="modal__button">
+            <CyrcleArrow titleCyrcle={"Більше про школу"} />
+          </button>
+          <button className="modal__button" onClick={showFreeModal}>
+            <CyrcleArrow titleCyrcle={"Безкоштовне заняття"} />
+          </button>
         </div>
       </div>
     </section>

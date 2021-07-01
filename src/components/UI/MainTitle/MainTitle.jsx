@@ -16,6 +16,7 @@ const MainTitle = ({
   titleArrow,
   children,
   sectionName,
+  showFreeModal,
 }) => {
   return (
     <section className={sectionName}>
@@ -28,7 +29,9 @@ const MainTitle = ({
         </h1>
         <div className="home__title-buttons">
           <div className="home__button-start">
-            <CyrcleArrow titleCyrcle={titleArrow} />
+            <button onClick={showFreeModal}>
+              <CyrcleArrow titleCyrcle={titleArrow} />
+            </button>
           </div>
 
           <div className="home__button-networks">

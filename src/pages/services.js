@@ -9,6 +9,7 @@ import ServicesCards from "../components/Pages/Services/ServicesCards/ServicesCa
 import ServicesAccordion from "../components/Pages/Services/ServicesAccordion/ServicesAccordion";
 import Crumbs from "../components/UI/Crumbs/Crumbs";
 import { dataCrumbs } from "../db/dataCrumbs";
+import Modal from "../components/UI/Modal/Modal";
 // import { useTranslation } from "gatsby-plugin-react-i18next";
 // import { graphql } from "gatsby";
 
@@ -27,6 +28,16 @@ const ServicesPage = () => {
   //     }
   //   }
   // `;
+  const [modalFree, setModalFree] = React.useState(false);
+  const [modalOrder, setModalOrder] = React.useState(false);
+
+  const showFreeModal = () => {
+    setModalFree(!modalFree);
+  };
+
+  const showModalOrder = () => {
+    setModalOrder(!modalOrder);
+  };
   const crumbs = dataCrumbs.services;
   return (
     <Layout>
@@ -36,6 +47,7 @@ const ServicesPage = () => {
         titleSecond={useLanguage("англійської", "английского")}
         titleThird={useLanguage("Мови", "Языка")}
         titleArrow={useLanguage("Перейти до тарифів", "Перейти к тарифам")}
+        showFreeModal={showFreeModal}
       />
       <TapeLine
         text={useLanguage(
@@ -43,7 +55,7 @@ const ServicesPage = () => {
           dataTapeLine.services.title_ru
         )}
       />
-      <ServicesCards />
+      <ServicesCards showModalOrder={showModalOrder} />
       {/* slider */}
       {/* гармошка */}
       <ServicesAccordion />
@@ -54,9 +66,16 @@ const ServicesPage = () => {
           "Сумніваєшся? \n Спробуй пробний урок! Тобі сподобається!",
           "Сомневаешься? \n Попробуй пробный урок! Тебе понравится!"
         )}
+        showFreeModal={showFreeModal}
       />
       <Crumbs crumbs={crumbs} />
       {/* pagination */}
+      <Modal
+        modalFree={modalFree}
+        modalOrder={modalOrder}
+        showFreeModal={showFreeModal}
+        showModalOrder={showModalOrder}
+      />
     </Layout>
   );
 };
