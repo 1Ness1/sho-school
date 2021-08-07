@@ -1,0 +1,53 @@
+.footer__copyright
+  border-top: 1px solid $black-op-30
+  padding: 40px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  @media (max-width: 576)
+    flex-wrap: wrap
+
+.footer__copyright-content
+  font-size: 12px
+  color: $grey-400
+  text-transform: uppercase
+  display: flex
+  align-items: center
+  font-family: "Montserrat", "Arial", sans-serif
+  @media (max-width: 992px)
+    font-size: 10px
+    flex-wrap: wrap
+  @media (max-width: 576)
+    margin-bottom: 40px
+
+.footer__copyright-link
+  position: relative
+  margin-left: 20px
+  color: inherit
+  font-size: inherit
+  @media (max-width: 768px)
+    margin-left: 15px
+    &:first-of-type
+      margin-left: 10px
+
+  &::before, &::after
+    content: ""
+    height: 12px
+    width: 1px
+    position: absolute
+    left: -10px
+    top: 50%
+    transform: translateY(-50%)
+    background: $grey-400
+    transition: all .3s ease-in-out
+  &::after
+    left: auto
+    right: -10px
+  &:last-child
+    &::before,
+    &::after
+      display: none
+
+.footer__text
+  @media (max-width: 700px)
+    width: 100%

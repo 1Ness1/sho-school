@@ -1,0 +1,53 @@
+.home__title-buttons
+  display: flex
+  justify-content: space-between
+  +media-breakpoint-down(xs)
+    justify-content: center
+
+.home__title
+  display: flex
+  place-items: center
+  flex-direction: column
+  margin-bottom: 135px
+  text-align: center
+
+.home__title-text
+  text-transform: uppercase
+  font-size: 100px
+  line-height: 100px
+  color: $basic-black
+  font-weight: normal
+  +media-breakpoint-down(lg)
+    font-size: 85px
+    line-height: 80px
+  +media-breakpoint-down(md) // ? md
+    font-size: 60px
+    line-height: 65px
+  +media-breakpoint-down(sm)
+    font-size: 45px
+    line-height: 50px
+  +media-breakpoint-down(xs) // ? xs
+    font-size: 25px
+    line-height: 30px
+
+.home
+  padding: 140px 0 60px 0
+  position: relative
+
+.home__wrapper
+  padding: 0 60px
+  .circle__svg
+    bottom: -130px
+    left: 30%
+  +media-breakpoint-down(lg)
+    padding: 0 40px
+  +media-breakpoint-down(md)
+    padding: 0 60px
+  +media-breakpoint-down(xs)
+    padding: 0 50px
+    .circle__svg
+      top: 80px
+
+.home__button-start
+  .cyrcle__arrow-title
+    text-transform: none

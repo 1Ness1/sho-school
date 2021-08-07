@@ -1,0 +1,80 @@
+.footer__main
+  border-top: 1px solid $black-op-30
+  padding: 85px 0
+
+.footer__content
+  display: grid
+  grid-template-columns: 35% 1fr auto
+  grid-column-gap: 10%
+  margin-bottom: 80px
+  @media (max-width: 992px)
+    grid-template-columns: 1fr
+    text-align: center
+    grid-gap: 80px
+  @media (max-width: 768px)
+    text-align: left
+  .up
+    @media (max-width: 992px)
+      display: none
+
+.footer__socials
+  display: grid
+  grid-template-columns: 35% 1fr auto
+  grid-column-gap: 10%
+  align-items: flex-end
+  @media (max-width: 992px)
+    grid-template-columns: 1fr
+    text-align: center
+  @media (max-width: 768px)
+    text-align: left
+
+.footer__title
+  font-size: 34px
+  line-height: 45px
+  font-weight: 500
+  color: $basic-black
+  white-space: pre-line
+  @media (max-width: 992px)
+    font-size: 30px
+    line-height: 35px
+
+.footer__cards-svg
+  margin-right: 15px
+  &:last-of-type
+    margin-right: 0
+
+.footer__marker
+  font-size: 12px
+  font-weight: 600
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  font-family: "Montserrat", "Arial", sans-serif
+  color: $grey-400
+  margin-bottom: 12px
+
+.footer__item
+  margin-bottom: 40px
+  &:last-of-type
+    margin-bottom: 0
+
+.footer__link
+  font-size: 14px
+  font-weight: 600
+  color: $basic-black
+  text-transform: uppercase
+  letter-spacing: 0.04em
+
+.footer__cyrcle
+  @media (max-width: 992px)
+    display: none
+
+.footer__messenger,
+.footer__networks
+  @media (max-width: 992px)
+    margin-bottom: 80px
+  .messanger,
+  .networks
+    @media (max-width: 992px)
+      justify-content: center
+    @media (max-width: 768px)
+      justify-content: flex-start

@@ -1,0 +1,83 @@
+
+.lessons
+  padding: 120px 0 220px 0
+  +media-breakpoint-down(lg)
+    padding: 100px 0 200px 0
+  +media-breakpoint-down(md)
+    padding: 100px 0 160px 0
+  +media-breakpoint-down(xs)
+    padding: 60px 0 100px 0
+
+.lessons__link
+  display: grid
+  grid-template-columns: 25% 1fr auto
+  padding: 80px 0
+  align-items: center
+  border-bottom: 1px solid $basic-black
+  color: $basic-black
+  &:first-of-type
+    border-top: 1px solid $basic-black
+  .cyrcle__yellow-star
+    width: 100px
+    height: 100px
+  .cyrcle__arrow
+    transform: translate(-50%, -50%) rotate(0deg)
+  +media-breakpoint-down(lg)
+    padding: 60px 0
+    grid-template-columns: 10% 1fr auto
+  +media-breakpoint-down(md)
+    .cyrcle__yellow-star
+      width: 80px
+      height: 80px
+  +media-breakpoint-down(sm)
+    grid-template-columns: none
+    .cyrcle__arrow-star
+      display: none
+  +media-breakpoint-down(xs)
+    padding: 40px 0
+
+.lessons__content
+  align-self: flex-start
+
+.lessons__count
+  font-size: 16px
+  align-self: flex-start
+  +media-breakpoint-down(sm)
+    display: none
+
+.lessons__subTitle
+  display: inline-block
+  color: $basic-grey
+  background: $basic-black
+  font-size: 34px
+  padding: 5px 15px
+  text-transform: uppercase
+
+  +media-breakpoint-down(md)
+    font-size: 30px
+  +media-breakpoint-down(sm)
+    display: flex
+    align-items: center
+    justify-content: space-between
+  +media-breakpoint-down(xs)
+    font-size: 20px
+    line-height: 25px
+
+.lessons__title
+  font-size: 24px
+  margin-bottom: 20px
+  line-height: 1
+  +media-breakpoint-down(md)
+    font-size: 20px
+    margin-bottom: 15px
+
+.lessons__subTitle-arrow
+  stroke: $basic-grey
+  display: none
+  +media-breakpoint-down(sm)
+    display: block
+
+.lessons__subTitle-text
+  +media-breakpoint-down(sm)
+    text-align: left
+    width: 40%

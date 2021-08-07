@@ -1,0 +1,40 @@
+.free-lesson
+  position: relative
+
+.free-lesson__container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-top: 1px solid $black-op-30
+  border-bottom: 1px solid $black-op-30
+  padding: 60px 0
+  +media-breakpoint-down(xs)
+    flex-direction: column
+
+.free-lesson__title
+  font-size: 34px
+  font-weight: 600
+  line-height: 45px
+  width: 50%
+  white-space: pre-line
+  +media-breakpoint-down(lg)
+    font-size: 30px
+    line-height: 35px
+    width: 60%
+  +media-breakpoint-down(lg)
+    font-size: 25px
+    line-height: 30px
+    width: 50%
+  +media-breakpoint-down(xs)
+    width: 100%
+    text-align: center
+    white-space: normal
+    font-size: 20px
+    line-height: 25px
+    margin-bottom: 40px
+
+.free-lesson__about
+  padding: 180px 0 220px 0
+  display: flex
+  justify-content: space-between
+  align-items: center

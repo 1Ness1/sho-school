@@ -1,11 +1,10 @@
 .header__num
   color: $basic-black
-  padding-left: 20px
-  order: -1
-  font-size: 14px
+  font-size: 12px
   font-weight: 600
-  letter-spacing: 2%
-  margin-bottom: 40px
+  letter-spacing: 0.02em
   font-family: "Benzin-example"
-  +media-breakpoint-up(lg)
-    order: 0
+  @media (max-width: 992px)
+    order: -1
+    margin-bottom: 40px
+    padding-left: 20px

@@ -4,7 +4,7 @@ import HeaderNumber from "./HeaderNumber/HeaderNumber";
 import HeaderLanguage from "./HeaderLanguage/HeaderLanguage";
 import HeaderCurrency from "./HeaderCurrency/HeaderCurrency";
 
-const HeaderMenu = ({ openSubMenu, openSub, active, navDb, headerDb }) => {
+const HeaderMenu = ({ openSubMenu, openSub, active, navDb, headerData }) => {
   return (
     <div
       className={
@@ -25,10 +25,13 @@ const HeaderMenu = ({ openSubMenu, openSub, active, navDb, headerDb }) => {
             openSub={openSub}
             navDb={navDb}
           />
-          <HeaderNumber className="header__num" headerDb={headerDb} />
+
+          <HeaderNumber className="header__num" headerData={headerData} />
+
           <div className="header__tabs">
-            <HeaderLanguage headerDb={headerDb} />
-            <HeaderCurrency headerDb={headerDb} />
+            <HeaderLanguage headerData={headerData} />
+            <span>|</span>
+            <HeaderCurrency headerData={headerData} />
           </div>
         </div>
       </div>

@@ -1,8 +1,23 @@
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+@import "bootstrap/dist/css/bootstrap.css"
+@import "bootstrap/scss/bootstrap-reboot.scss"
+@import "bootstrap/scss/mixins/_breakpoints.scss"
+
 @import './config'
+@import "./extends"
+
+@import "../components/UI/ui"
 
 @import '../components/Layout/Header/Header'
+@import "../components/Layout/Footer/Footer"
+@import "../components/Layout/Instagram/Instagram"
+
+@import "../components/Pages/Home/Home"
+@import "../components/Pages/Services/Services"
+@import "../components/Pages/About/About"
+@import "../components/Pages/Article/Article"
+@import "../components/Pages/TapLink/tapLink"
+@import "../components/Pages/404/404"
+@import "../components/Pages/Blog/Blog"
 
 *,*::before,*::after
   box-sizing: border-box
@@ -50,30 +65,3 @@ a
 
 p
   margin: 0
-
-.container
-  max-width: 1400px
-  width: 100%
-  margin: 0 auto
-
-// /==========  Mobile First  ==========/
-
-// //Extra small: <576px
-// +media-breakpoint-up(xs)
-
-// //Small: ≤576px
-// +media-breakpoint-up(sm)
-
-// //Medium: ≤768px
-// +media-breakpoint-up(md)
-
-// //Large: ≤992px
-// +media-breakpoint-up(lg)
-
-// //Extra large: ≤1200px
-// +media-breakpoint-up(xl)
-
-// .container-fluid
-//   padding: 0 9vw
-//   +media-breakpoint-down(sm)
-//     padding: 0 4vw

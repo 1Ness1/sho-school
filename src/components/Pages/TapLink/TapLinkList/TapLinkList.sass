@@ -1,0 +1,56 @@
+.tap-link
+  padding-bottom: 220px
+  +media-breakpoint-down(lg)
+    padding-bottom: 200px
+  +media-breakpoint-down(md)
+    padding-bottom: 160px
+  +media-breakpoint-down(xs)
+    padding-bottom: 100px
+
+.tap-link__container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  text-align: left
+  padding: 60px 0
+  .cyrcle__arrow-star
+    transform: rotate(-90deg)
+  +media-breakpoint-down(sm)
+    padding: 40px 0
+    .cyrcle__arrow-star
+      display: none
+
+.tap-link__link
+  flex-grow: 1
+  font-size: 24px
+  line-height: 35px
+  color: $basic-black
+  text-transform: uppercase
+  font-weight: 500
+  white-space: pre-line
+  +media-breakpoint-down(lg)
+    font-size: 20px
+    list-style: 25px
+  +media-breakpoint-down(xs)
+    font-size: 14px
+    white-space: normal
+
+.tap-link__link-container
+  max-width: 500px
+  width: 100%
+  display: block
+
+.tap-link__count
+  width: 20%
+  font-size: 12px
+  font-family: "Montserrat", "Arial", sans-serif
+  letter-spacing: 0.02em
+  font-weight: 600
+  color: $basic-black
+  +media-breakpoint-down(sm)
+    display: none
+
+.tap-link__item
+  border-bottom: 1px solid $basic-black
+  &:first-of-type
+    border-top: 1px solid $basic-black

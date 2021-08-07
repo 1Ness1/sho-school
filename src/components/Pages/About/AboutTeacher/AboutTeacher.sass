@@ -1,0 +1,63 @@
+.teacher
+  .block__title-content
+    margin-bottom: 120px
+
+.teacher__content
+  display: grid
+  grid-template-columns: 45% 45%
+  grid-column-gap: 10%
+  +media-breakpoint-down(md)
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr auto
+    grid-row-gap: 60px
+
+.teacher__title
+  margin-bottom: 80px
+  font-size: 34px
+  line-height: 45px
+  +media-breakpoint-down(lg)
+    font-size: 30px
+    line-height: 35px
+    margin-bottom: 60px
+  +media-breakpoint-down(xs)
+    font-size: 20px
+    line-height: 25px
+    margin-bottom: 40px
+
+.teacher__photo
+  // width: 100%
+
+.teacher__about
+  padding: 100px 0
+  +media-breakpoint-down(md)
+    padding: 0
+
+.teacher__markdown
+  margin-bottom: 20px
+  font-family: "Montserrat", "Arial", sans-serif
+  font-weight: 500
+  font-size: 15px
+  line-height: 25px
+  &:last-of-type
+    margin-bottom: 0
+  +media-breakpoint-down(lg)
+    font-size: 14px
+    line-height: 20px
+  +media-breakpoint-down(md)
+    margin-bottom: 15px
+
+.teacher__marker
+  display: block
+  margin-bottom: 90px
+  font-weight: 600
+  font-size: 12px
+  letter-spacing: 0.02em
+  color: $grey-400
+  text-transform: uppercase
+  font-family: "Montserrat", "Arial", sans-serif
+  +media-breakpoint-down(lg)
+    margin-bottom: 80px
+  +media-breakpoint-down(md)
+    margin-bottom: 50px
+  +media-breakpoint-down(xs)
+    margin-bottom: 40px

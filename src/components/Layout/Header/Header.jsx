@@ -5,7 +5,7 @@ import HeaderMenu from "./HeaderMenu/HeaderMenu";
 
 // import './Header.sass'
 
-const Header = ({ navDb, headerDb }) => {
+const Header = ({ navDb, headerData }) => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   const [openSub, setOpenSub] = useState(false);
@@ -26,23 +26,20 @@ const Header = ({ navDb, headerDb }) => {
 
   return (
     <header className="header">
-      <div className="container">
-        <div className="header__wrapper">
-          <HeaderLogo />
-          <HeaderMenu
-            active={active}
-            closeMenuHandler={closeMenuHandler}
-            openSubMenu={openSubMenu}
-            openSub={openSub}
-            navDb={navDb}
-            headerDb={headerDb}
-          />
-          <HeaderBurger
-            burgerClickHandler={burgerClickHandler}
-            active={active}
-          />
-        </div>
+      {/* <div className="container"> */}
+      <div className="header__wrapper">
+        <HeaderLogo />
+        <HeaderMenu
+          active={active}
+          closeMenuHandler={closeMenuHandler}
+          openSubMenu={openSubMenu}
+          openSub={openSub}
+          navDb={navDb}
+          headerData={headerData}
+        />
+        <HeaderBurger burgerClickHandler={burgerClickHandler} active={active} />
       </div>
+      {/* </div> */}
     </header>
   );
 };

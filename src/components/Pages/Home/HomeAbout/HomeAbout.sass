@@ -1,0 +1,126 @@
+.home__about
+  padding: 220px 0 130px 0
+  +media-breakpoint-down(lg)
+    padding: 200px 0 110px 0
+  +media-breakpoint-down(mg)
+    padding: 160px 0 90px 0
+  +media-breakpoint-down(xs)
+    padding: 100px 0 50px 0
+
+.home__about-title
+  display: flex
+  justify-content: space-between
+  margin-bottom: 100px
+  position: relative
+  .block__title-content
+    margin: 0
+  +media-breakpoint-down(lg)
+    margin-bottom: 90px
+  +media-breakpoint-down(md)
+    margin-bottom: 70px
+  +media-breakpoint-down(xs)
+    margin-bottom: 55px
+
+  .circle__svg
+    top: 0
+    right: 150px
+    transform: rotate(-90deg)
+  .block__title-content
+    display: block
+  .block__marker
+    margin-bottom: 80px
+    width: auto
+    +media-breakpoint-down(md)
+      margin-bottom: 70px
+    +media-breakpoint-down(xs)
+      margin-bottom: 40px
+  .cyrcle-heart
+    align-self: flex-end
+    +media-breakpoint-down(xs)
+      display: none
+  .block__title
+    width: auto
+
+.home__content
+  // columns: 2 auto 
+  // display: grid
+  display: flex
+  justify-content: space-between
+  // flex-flow: column wrap
+  // max-height: 20vw
+  // place-items: center
+  // grid-template-columns: 1fr 1fr
+  margin-bottom: 80px
+  // flex-basis: 0
+  // columns: 2
+  // grid-gap: 20px 60px
+  // column-gap: 60px
+  // ! тут строил варианты, как можно было сделать, в итоге вернулся просто к флексам
+  +media-breakpoint-down(lg)
+    // column-gap: 40px
+    grid-column-gap: 40px
+  +media-breakpoint-down(md)
+    // columns: 1
+    // grid-template-columns: 1fr
+    flex-direction: column
+  +media-breakpoint-down(md)
+    margin-bottom: 40px
+
+.markdown-components
+  display: flex
+  justify-content: space-between
+  span
+    display: block
+    margin-bottom: 40px
+    color: $grey-400
+    font-size: 12px
+    line-height: 1
+    font-weight: 500
+    letter-spacing: 0.02em
+  p
+    margin-bottom: 20px
+    font-size: 15px
+    line-height: 25px
+    font-weight: normal
+    font-family: "Montserrat", "Arial", sans-serif
+    color: $basic-black
+    &:last-of-type
+      margin-bottom: 0
+    +media-breakpoint-down(lg)
+      font-size: 14px
+      line-height: 20px
+  div
+    margin-bottom: 20px
+    width: 45%
+    +media-breakpoint-down(md)
+      width: 100%
+    &:last-of-type
+      margin-bottom: 0
+
+.home__buttons
+  display: flex
+  justify-content: space-between
+  +media-breakpoint-down(sm)
+    justify-content: center
+  .cyrcle__arrow-star
+    +media-breakpoint-down(md)
+      width: auto
+    +media-breakpoint-down(sm)
+      &:last-of-type
+        display: none
+
+  .cyrcle__arrow-title
+    border-bottom: 1px solid $basic-black
+
+  .cyrcle__yellow-star
+    width: 80px
+    height: 80px
+    +media-breakpoint-down(md)
+      width: 60px
+      height: 60px
+    +media-breakpoint-down(md)
+      width: 50px
+      height: 50px
+
+  .cyrcle__arrow
+    transform: translate(-50%, -50%) rotate(0deg)

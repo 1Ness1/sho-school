@@ -2,7 +2,7 @@ import React from "react";
 import useLanguages from "../../../../../../Hooks/useLanguages";
 import { Link } from "gatsby-plugin-react-i18next";
 
-import Arrow from "../../../../../../svg/arrow_1.svg";
+import Arrow from "../../../../../../svg/arrow.svg";
 
 const HeaderNavDefault = ({ item, counter }) => {
   const langToggle = useLanguages;

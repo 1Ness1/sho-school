@@ -1,0 +1,20 @@
+.cyrcle-heart__wrapper
+  position: relative
+
+.cyrcle-heart__inner
+  @extend %absolute-center
+
+.cyrcle-heart__heart
+  // transform: rotate(-90deg)
+  width: 20px
+  height: 20px
+  stroke: $basic-black
+
+.cyrcle-heart__svg
+  animation: 8s ease-in-out infinite rotate-infinite
+
+// @keyframes rotate-infinite
+//   0%
+//     transform: rotate(0deg)
+//   100%
+//     transform: rotate(360deg)

@@ -13,24 +13,32 @@ const dataNav = [
     subMenu: [
       {
         id: 1,
+        prefix_ua: "Онлайн уроки ",
+        prefix_ru: "Онлайн уроки ",
         title_ua: "Онлайн уроки Англійської мови",
         title_ru: "Онлайн уроки Английского языка",
         link: "/english-lessons/",
       },
       {
         id: 2,
+        prefix_ua: "Онлайн уроки ",
+        prefix_ru: "Онлайн уроки ",
         title_ua: "Онлайн уроки Німецької мови",
         title_ru: "Онлайн уроки Немецкого языка",
         link: "/english-lessons/",
       },
       {
         id: 3,
+        prefix_ua: "Онлайн уроки ",
+        prefix_ru: "Онлайн уроки ",
         title_ua: "Онлайн уроки Французької мови",
         title_ru: "Онлайн уроки Французкого языка",
         link: "/english-lessons/",
       },
       {
         id: 4,
+        prefix_ua: "Онлайн уроки ",
+        prefix_ru: "Онлайн уроки ",
         title_ua: "Онлайн уроки Іспанської мови",
         title_ru: "Онлайн уроки Испанского языка",
         link: "/english-lessons/",
