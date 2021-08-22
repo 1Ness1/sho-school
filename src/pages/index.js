@@ -15,28 +15,28 @@ import MainTitle from "../components/UI/MainTitle/MainTitle";
 import HomeAbout from "../components/Pages/Home/HomeAbout/HomeAbout";
 import HomeBenefits from "../components/Pages/Home/HomeBenefits/HomeBenefits";
 
-// import { useTranslation } from "gatsby-plugin-react-i18next";
-// import { graphql } from "gatsby";
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { graphql } from "gatsby";
 // import SEO from "../components/seo";
 import Video from "../components/UI/Video/Video";
 import "../styles/style.sass";
 
 const IndexPage = () => {
   const tapeLineData = dataTapeLine;
-  // const { t } = useTranslation();
-  // const query = graphql`
-  //   query($language: String!) {
-  //     locales: allLocale(filter: { language: { eq: $language } }) {
-  //       edges {
-  //         node {
-  //           ns
-  //           data
-  //           language
-  //         }
-  //       }
-  //     }
-  //   }
-  // `;
+  const { t } = useTranslation();
+  const query = graphql`
+    query($language: String!) {
+      locales: allLocale(filter: { language: { eq: $language } }) {
+        edges {
+          node {
+            ns
+            data
+            language
+          }
+        }
+      }
+    }
+  `;
   const [modalFree, setModalFree] = React.useState(false);
   const [modalOrder, setModalOrder] = React.useState(false);
 

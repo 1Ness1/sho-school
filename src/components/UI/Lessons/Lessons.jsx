@@ -1,7 +1,7 @@
 import React from "react";
 import useLang from "../../../Hooks/useLanguages";
 import { dataLessons } from "../../../db/dataLessons";
-import CyrcleArrow from "../../UI/Circles/CyrcleArrow/CyrcleArrow";
+import CyrcleArrow from "../Circles/CyrcleArrow/CyrcleArrow";
 // import PropTypes from 'prop-types';
 import Arrow from "../../../svg/arrow.svg";
 

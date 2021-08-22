@@ -5,8 +5,8 @@ import useLanguage from "../Hooks/useLanguages";
 
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-// import { useTranslation } from "gatsby-plugin-react-i18next";
-// import { graphql } from "gatsby";
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { graphql } from "gatsby";
 import ArticleTitle from "../components/Pages/Article/ArticleTitle/ArticleTitle";
 
 // ? Стрелки пагинации
@@ -20,20 +20,20 @@ import { dataCrumbs } from "../db/dataCrumbs";
 const Article = () => {
   const crumbs = dataCrumbs.article;
   // ! путь к объекту в котором массив крошек
-  // const { t } = useTranslation();
-  // const query = graphql`
-  //   query($language: String!) {
-  //     locales: allLocale(filter: { language: { eq: $language } }) {
-  //       edges {
-  //         node {
-  //           ns
-  //           data
-  //           language
-  //         }
-  //       }
-  //     }
-  //   }
-  // `;
+  const { t } = useTranslation();
+  const query = graphql`
+    query($language: String!) {
+      locales: allLocale(filter: { language: { eq: $language } }) {
+        edges {
+          node {
+            ns
+            data
+            language
+          }
+        }
+      }
+    }
+  `;
   return (
     <Layout>
       <article className="article">

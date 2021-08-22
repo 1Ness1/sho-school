@@ -1,9 +1,12 @@
 import React from "react";
 // import PropTypes from 'prop-types';
+import { useTranslation } from "react-i18next";
+
 import BlockTitle from "../../../UI/BlockTitle/BlockTitle";
 import { StaticImage } from "gatsby-plugin-image";
 
 const AboutTeacher = ({ title, subTitle }) => {
+  const { t } = useTranslation();
   return (
     <section className="teacher">
       <div className="wrapper">

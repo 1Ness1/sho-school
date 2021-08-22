@@ -1,5 +1,5 @@
 import React from "react";
-import CircleArrow from "../../../UI/Circles/CyrcleArrow/CyrcleArrow";
+import CircleArrow from "../../Circles/CyrcleArrow/CyrcleArrow";
 // import PropTypes from 'prop-types';
 
 const ModalFree = ({ modalTitle, modalFree, showFreeModal }) => {

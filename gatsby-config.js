@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/locales`,
+        path: `${__dirname}/locales/`,
         name: `locale`,
       },
     },
@@ -76,8 +76,8 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`ua`, `ru`, `en`],
-        defaultLanguage: `ua`,
+        languages: [`ru`, `ua`],
+        // defaultLanguage: `ua`,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
         siteUrl: `https://ar-design.com.ua`,
         // you can pass any i18next options
@@ -88,73 +88,73 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false,
         },
-        // pages: [
-        //   {
-        //     matchPath: "/:lang?/blog/:uid",
-        //     getLanguageFromPath: false,
-        //     excludeLanguages: ["en"],
-        //   },
-        //   {
-        //     matchPath: "/preview",
-        //     languages: ["en"],
-        //   },
-        // ],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        exclude: ["/**/404", "/**/404.html"],
-        query: `
+        pages: [
           {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
-              edges {
-                node {
-                  context {
-                    i18n {
-                      defaultLanguage
-                      languages
-                      originalPath
-                    }
-                  }
-                  path
-                }
-              }
-            }
-          }
-        `,
-        serialize: ({ site, allSitePage }) => {
-          return allSitePage.edges.map((edge) => {
-            const {
-              languages,
-              originalPath,
-              defaultLanguage,
-            } = edge.node.context.i18n;
-            const { siteUrl } = site.siteMetadata;
-            const url = siteUrl + originalPath;
-            const links = [
-              { lang: defaultLanguage, url },
-              { lang: "x-default", url },
-            ];
-            languages.forEach((lang) => {
-              if (lang === defaultLanguage) return;
-              links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
-            });
-            return {
-              url,
-              changefreq: "daily",
-              priority: originalPath === "/" ? 1.0 : 0.7,
-              links,
-            };
-          });
-        },
+            matchPath: "/:lang?/blog/:uid",
+            getLanguageFromPath: false,
+            excludeLanguages: ["ru"],
+          },
+          {
+            matchPath: "/preview",
+            languages: ["en"],
+          },
+        ],
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-sitemap",
+    //   options: {
+    //     exclude: ["/**/404", "/**/404.html"],
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             siteUrl
+    //           }
+    //         }
+    //         allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
+    //           edges {
+    //             node {
+    //               context {
+    //                 i18n {
+    //                   defaultLanguage
+    //                   languages
+    //                   originalPath
+    //                 }
+    //               }
+    //               path
+    //             }
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     serialize: ({ site, allSitePage }) => {
+    //       return allSitePage.edges.map((edge) => {
+    //         const {
+    //           languages,
+    //           originalPath,
+    //           defaultLanguage,
+    //         } = edge.node.context.i18n;
+    //         const { siteUrl } = site.siteMetadata;
+    //         const url = siteUrl + originalPath;
+    //         const links = [
+    //           { lang: defaultLanguage, url },
+    //           { lang: "x-default", url },
+    //         ];
+    //         languages.forEach((lang) => {
+    //           if (lang === defaultLanguage) return;
+    //           links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
+    //         });
+    //         return {
+    //           url,
+    //           changefreq: "daily",
+    //           priority: originalPath === "/" ? 1.0 : 0.7,
+    //           links,
+    //         };
+    //       });
+    //     },
+    //   },
+    // },
     `gatsby-plugin-sass`,
     // {
     //   resolve: `gatsby-source-strapi`,

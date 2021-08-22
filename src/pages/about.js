@@ -12,11 +12,17 @@ import Lessons from "../components/UI/Lessons/Lessons";
 import FreeLesson from "../components/UI/FreeLesson/FreeLesson";
 import Crumbs from "../components/UI/Crumbs/Crumbs";
 // ! Pages component
+import "../../i18n";
+
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { graphql } from "gatsby";
 import AboutMarkdown from "../components/Pages/About/AboutMarkdown/AboutMarkdown";
 import AboutTeacher from "../components/Pages/About/AboutTeacher/AboutTeacher";
 import AboutStory from "../components/Pages/About/AboutStory/AboutStory";
+import HomeAbout from "../components/Pages/Home/HomeAbout/HomeAbout";
 const About = () => {
   const crumbs = dataCrumbs.about;
+  const { t } = useTranslation();
   return (
     <Layout>
       <MainTitle
@@ -42,6 +48,7 @@ const About = () => {
         <>
           <div>
             <p>
+              {t("Home")}
               Онлайн навчання іноземним мовам - це відмінна можливість заощадити
               свій час і витратити його з максимальною користю.
             </p>
@@ -139,3 +146,16 @@ const About = () => {
 // about.propTypes = {};
 
 export default About;
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
